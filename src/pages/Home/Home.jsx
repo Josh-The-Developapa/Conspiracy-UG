@@ -2,9 +2,10 @@ import React from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
 import Models from '../../assets/Models.png';
-// import Models from '../../assets/Models3.jpeg';
 import Card from '../../components/Card/Card';
-import ModelsCard5 from '../../assets/card-image1.png';
+// import ModelsCard5 from '../../assets/card-image1.png';
+import ModelsCard5 from '../../assets/card-image7.jpg';
+// import ModelsCard5 from '../../assets/card-image8.jpeg';
 import ModelsCard1 from '../../assets/card-image2.png';
 import ModelsCard4 from '../../assets/card-image4.png';
 import ModelsCard6 from '../../assets/card-image6.png';
@@ -54,8 +55,8 @@ function Home() {
   }
 
   // sendProductDataToFirebase(
-  //   'Flight Jackets',
-  //   'Elevate your style with our flight jackets. Crafted for adventure, designed for style'
+  //   'T-Shirts',
+  //   'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
   // );
 
   return (
@@ -71,8 +72,8 @@ function Home() {
       }}
     >
       <Header />
-      {/* <div className="models-pic"></div> */}
-      <img src={Models} alt="Models-Pic" className="models-pic" />
+      <div className="models-pic"></div>
+      {/* <img src={Models} alt="Models-Pic" className="models-pic" /> */}
       <div
         style={{
           textAlign: 'center',
@@ -101,7 +102,7 @@ function Home() {
           }
         />
         <Card
-          title="Varsity jackets"
+          title="Varsity Jackets"
           image={ModelsCard3}
           para={
             "Timeless design meets modern comfort. Discover Conspiracy's varsity jackets collection."
@@ -115,17 +116,17 @@ function Home() {
           }
         />
         <Card
-          title="Flight Jackets"
+          title="Leather Coats"
           image={ModelsCard5}
           para={
-            'Elevate your style with our flight jackets. Crafted for adventure, designed for style'
+            'Dress big, live large! Unleash your style with our killer oversized leather coats - because fashion should always be as bold as you are!'
           }
         />
         <Card
-          title="Varsity jackets"
+          title="T-Shirts"
           image={ModelsCard6}
           para={
-            "Timeless design meets modern comfort. Discover Conspiracy's varsity jackets collection."
+            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
         />
       </div>
