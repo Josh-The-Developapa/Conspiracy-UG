@@ -1,0 +1,44 @@
+.footer {
+  background-color: #000000;
+  color: white;
+  padding: 60px 20px; /* Increased padding for better spacing */
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px; /* Increased max-width for better content alignment */
+  margin: 0 auto;
+}
+
+.footer-heading {
+  font-size: 45px; /* Larger font size for the heading */
+  margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.footer-text {
+  font-size: 20px; /* Larger font size for the text */
+  margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; /* Added margin for better separation from content */
+}
+
+.social-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 15px; /* Increased margin for better spacing between links */
+  font-size: 20px; /* Larger font size for the links */
+  transition: color 0.3s; /* Added transition for hover effect */
+}
+
+.social-link:hover {
+  color: #ff69b4; /* Change color on hover for better interaction */
+}
+
+.social-link i {
+  margin-right: 10px; /* Adjusted margin for better icon alignment */
+}

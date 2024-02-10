@@ -1,160 +1,98 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import ShoppingBag from '../../assets/bag.png';
 import Favs from '../../assets/heart.png';
 import ProfilePic from '../../assets/user.png';
 
 function Header() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(
+          'https://conspiracy-67f09-default-rtdb.firebaseio.com/products.json'
+        );
+        if (!response.ok) {
+          throw new Error('Failed to fetch products');
+        }
+        const data = await response.json();
+        const loadedProducts = [];
+        for (const key in data) {
+          loadedProducts.push({
+            id: key,
+            productName: data[key].productName,
+            description: data[key].description,
+          });
+        }
+        setProducts(loadedProducts);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    if (searchTerm === '') {
+      setFilteredProducts([]);
+      return;
+    }
+
+    const filteredResults = products.filter((product) =>
+      product.productName.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredProducts(filteredResults);
+  }, [searchTerm, products]);
+
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
     <div className="header">
-      <div
-        style={{
-          display: 'flex',
-          //   backgroundColor: 'blue',
-          marginRight: '50px',
-          justifyContent: 'flex-start',
-          paddingLeft: '15px',
-        }}
-      >
-        <Link to="/">
-          <h1 style={{ color: 'white', fontSize: '40px' }}>
-            <i>Conspiracy UG</i>
-          </h1>
+      <div className="logo-container">
+        <Link to="/" className="logo">
+          <h2>Conspiracy UG</h2>
         </Link>
       </div>
-      {/* <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          //   width: '50%',
-          backgroundColor: 'green',
-          justifyContent: 'flex-end',
-        }}
-      > */}
-      <Link
-        to="/"
-        style={{ color: 'white', fontWeight: 700, fontSize: '18px' }}
-        className="NavLink"
-      >
-        <p>Home</p>
-      </Link>
-      <Link
-        to="/"
-        style={{
-          color: 'white',
-          fontWeight: 700,
-          fontSize: '18px',
-          marginLeft: '30px',
-        }}
-        className="NavLink"
-      >
-        <p>Products</p>
-      </Link>
-      {/* <Link
-        to="/"
-        style={{
-          color: 'white',
-          marginLeft: '30px',
-          fontWeight: 700,
-          fontSize: '18px',
-        }}
-      >
-        <p>Support</p>
-      </Link> */}
-      <Link
-        to="/"
-        style={{
-          color: 'white',
-          marginLeft: '30px',
-          fontWeight: 700,
-          fontSize: '18px',
-        }}
-        className="NavLink"
-      >
-        <p>About Us</p>
-      </Link>
-      {/* <Link
-        to="/"
-        style={{
-          color: 'white',
-          marginLeft: '30px',
-          fontWeight: 700,
-          fontSize: '18px',
-        }}
-      >
-        <p>Login</p>
-      </Link> */}
-      {/* </div> */}
-      <div
-        style={{ display: 'flex', alignItems: 'center', marginLeft: '35px' }}
-      >
+      <div className="nav-links">
+        <NavLink to="/" className="NavLink">
+          Home
+        </NavLink>
+        <NavLink to="/products" className="NavLink">
+          Products
+        </NavLink>
+        <NavLink to="/about" className="NavLink">
+          About Us
+        </NavLink>
+      </div>
+      <div className="search-container">
         <input
           type="text"
           placeholder="Search for products..."
-          style={{
-            padding: '15px',
-            border: '1px solid #fff',
-            borderRadius: '25px',
-            marginRight: '10px',
-            background: 'transparent',
-            color: '#fff',
-            width: '180px',
-            height: '20px',
-            fontSize: '18px',
-          }}
           className="search-box"
+          value={searchTerm}
+          onChange={handleChange}
         />
-        {/* <button
-          style={{
-            padding: '10px',
-            border: '1px solid #fff',
-            borderRadius: '4px',
-            background: 'transparent',
-            color: '#fff',
-            cursor: 'pointer',
-          }}
-        >
-          Search
-        </button> */}
+        <div className="search-underline"></div>
+        <div className="search-results">
+          {filteredProducts.map((product) => (
+            <div key={product.id} className="search-item">
+              <p>{product.productName}</p>
+              {/* <p>{product.description}</p> */}
+            </div>
+          ))}
+        </div>
       </div>
-      <img
-        src={ShoppingBag}
-        className="ShoppingBag"
-        alt="Shopping-Bag"
-        style={{
-          objectFit: 'contain',
-          height: '28px',
-          marginLeft: '35px',
-          cursor: 'pointer',
-        }}
-        title="Shopping Bag"
-      />
-      <img
-        src={Favs}
-        className="Favourites"
-        alt="Favourites-Img"
-        style={{
-          objectFit: 'contain',
-          height: '28px',
-          marginLeft: '30px',
-          cursor: 'pointer',
-        }}
-        title="Favourites"
-      />
-      <img
-        src={ProfilePic}
-        alt="ProfilePic-Img"
-        className="ProfilePic"
-        style={{
-          objectFit: 'contain',
-          height: '28px',
-          marginLeft: '30px',
-          marginRight: '15px',
-          cursor: 'pointer',
-        }}
-        title="User Profile"
-      />
+      <div className="icons-container">
+        <img src={ShoppingBag} className="icon" alt="Shopping Bag" />
+        <img src={Favs} className="icon" alt="Favourites" />
+        <img src={ProfilePic} className="icon" alt="User Profile" />
+      </div>
     </div>
   );
 }
