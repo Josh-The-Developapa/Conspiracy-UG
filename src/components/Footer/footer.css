@@ -1,8 +1,13 @@
 .footer {
   background-color: #000000;
   color: white;
-  padding: 60px 20px; /* Increased padding for better spacing */
+  padding: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
 }
 
 .footer-content {
@@ -11,12 +16,18 @@
 }
 
 .footer-heading {
-  font-size: 45px; /* Larger font size for the heading */
+  font-size: 30px; /* Larger font size for the heading */
   margin-bottom: 20px; /* Increased margin for better spacing */
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    background-size: 400% 400%;
+    animation: rainbow 3s linear infinite;
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer-text {
-  font-size: 20px; /* Larger font size for the text */
+  font-size: 18px; /* Larger font size for the text */
   margin-bottom: 30px; /* Increased margin for better spacing */
 }
 
@@ -31,13 +42,38 @@
   cursor: pointer;
   text-decoration: none;
   margin: 0 15px; /* Increased margin for better spacing between links */
-  font-size: 20px; /* Larger font size for the links */
+  font-size: 17px; /* Larger font size for the links */
   transition: color 0.3s; /* Added transition for hover effect */
 }
-
-.social-link:hover {
-  color: #ff69b4; /* Change color on hover for better interaction */
+.footer-social-div{
+  cursor: pointer;
+  
 }
+.footer-social-div:hover{
+#social-link1 {
+  color: #cd23d5; /* Change color on hover for better interaction */
+}
+#social-link2 {
+   color: #ff2c2c; /* Change color on hover for better interaction */
+}
+
+#social-link3 {
+  color: #103b99; /* Change color on hover for better interaction */
+}
+}
+
+
+
+
+/* Define the rainbow gradient animation */
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Apply the rainbow gradient to text when hovered */
+
 
 .social-link i {
   margin-right: 10px; /* Adjusted margin for better icon alignment */

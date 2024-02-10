@@ -20,7 +20,9 @@ function Card(props) {
         </div>
       )}
       <img className="card-img" src={props.image} alt={`${props.image}`} />
-      <h2 style={{ color: 'white', marginBottom: '-15px' }}>{props.title}</h2>
+      <h2 style={{ color: 'white', marginBottom: '-15px', marginLeft: '20px' }}>
+        {props.title}
+      </h2>
       <p style={{ marginLeft: '20px' }}>{props.para}</p>
     </div>
   );

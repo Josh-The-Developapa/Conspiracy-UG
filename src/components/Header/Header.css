@@ -15,11 +15,30 @@
   margin-right:50px;
 }
 
+
 .logo {
   color: white;
   text-decoration: none;
   font-size: 24px;
+  
 }
+
+/* #logo-h2{
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    background-size: 400% 400%;
+    animation: rainbow 3s linear infinite;
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+} */
+
+
+/* Define the rainbow gradient animation */
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
 .nav-links {
   display: flex;
@@ -65,7 +84,7 @@
 
 .search-item {
   padding: 10px;
-  border-bottom: 1px solid #dddddd;
+  /* border-bottom: 1px solid #dddddd; */
 }
 
 

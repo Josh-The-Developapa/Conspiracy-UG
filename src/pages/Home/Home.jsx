@@ -4,13 +4,16 @@ import Header from '../../components/Header/Header';
 import Models from '../../assets/Models.png';
 // import Models from '../../assets/Models3.jpeg';
 import Card from '../../components/Card/Card';
-// import ModelsCard1 from '../../assets/card-image1.webp';
+import ModelsCard5 from '../../assets/card-image1.png';
 import ModelsCard1 from '../../assets/card-image2.png';
+import ModelsCard4 from '../../assets/card-image4.png';
+import ModelsCard6 from '../../assets/card-image6.png';
 
 import ModelsCard2 from '../../assets/card-image2.webp';
 import ModelsCard3 from '../../assets/card-image3.webp';
 import Footer from '../../components/Footer/footer';
 import Testimonials from '../../components/Testimonials/Testimonials';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 function Home() {
   async function sendProductDataToFirebase(productName, description) {
@@ -68,17 +71,8 @@ function Home() {
       }}
     >
       <Header />
-      <img
-        src={Models}
-        alt="Models-Pic"
-        style={{
-          width: '100vw',
-          height: '750px',
-          objectFit: 'cover',
-          marginTop: '85px',
-          // position: 'relative',
-        }}
-      />
+      {/* <div className="models-pic"></div> */}
+      <img src={Models} alt="Models-Pic" className="models-pic" />
       <div
         style={{
           textAlign: 'center',
@@ -109,6 +103,27 @@ function Home() {
         <Card
           title="Varsity jackets"
           image={ModelsCard3}
+          para={
+            "Timeless design meets modern comfort. Discover Conspiracy's varsity jackets collection."
+          }
+        />
+        <Card
+          title="T-Shirts"
+          image={ModelsCard4}
+          para={
+            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
+          }
+        />
+        <Card
+          title="Flight Jackets"
+          image={ModelsCard5}
+          para={
+            'Elevate your style with our flight jackets. Crafted for adventure, designed for style'
+          }
+        />
+        <Card
+          title="Varsity jackets"
+          image={ModelsCard6}
           para={
             "Timeless design meets modern comfort. Discover Conspiracy's varsity jackets collection."
           }

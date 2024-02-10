@@ -17,6 +17,7 @@ function Header() {
           'https://conspiracy-67f09-default-rtdb.firebaseio.com/products.json'
         );
         if (!response.ok) {
+          console.log('Failed to fetch products');
           throw new Error('Failed to fetch products');
         }
         const data = await response.json();
@@ -56,7 +57,9 @@ function Header() {
     <div className="header">
       <div className="logo-container">
         <Link to="/" className="logo">
-          <h2>Conspiracy UG</h2>
+          <h2 id="logo-h2" style={{ fontSize: '25px' }}>
+            Conspiracy UG
+          </h2>
         </Link>
       </div>
       <div className="nav-links">
