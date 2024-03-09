@@ -8,7 +8,7 @@ import Image4 from '../../assets/riya-giveaway.png';
 import Image8 from '../../assets/card-image6.png';
 import Image6 from '../../assets/card-image7.png';
 
-function About() {
+const About = () => {
   return (
     <div className="about-container">
       <Header />
@@ -52,6 +52,6 @@ function About() {
       </div>
     </div>
   );
-}
+};
 
 export default About;
