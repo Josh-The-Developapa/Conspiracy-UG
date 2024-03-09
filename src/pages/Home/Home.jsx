@@ -4,17 +4,19 @@ import Header from '../../components/Header/Header';
 import Models from '../../assets/Models.png';
 import Card from '../../components/Card/Card';
 // import ModelsCard5 from '../../assets/card-image1.png';
-import ModelsCard5 from '../../assets/card-image7.jpg';
+import ModelsCard5 from '../../assets/card-image2.png';
 // import ModelsCard5 from '../../assets/card-image8.jpeg';
-import ModelsCard1 from '../../assets/card-image2.png';
+import ModelsCard1 from '../../assets/card-image7.png';
 import ModelsCard4 from '../../assets/card-image4.png';
+// import ModelsCard3 from '../../assets/card-image5.png';
+import ModelsCard3 from '../../assets/riya-giveaway.png';
 import ModelsCard6 from '../../assets/card-image6.png';
 
-import ModelsCard2 from '../../assets/card-image2.webp';
-import ModelsCard3 from '../../assets/card-image3.webp';
+// import ModelsCard2 from '../../assets/card-image2.webp';
+import ModelsCard2 from '../../assets/card-image3.png';
+// import ModelsCard3 from '../../assets/card-image3.webp';
 import Footer from '../../components/Footer/footer';
 import Testimonials from '../../components/Testimonials/Testimonials';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 function Home() {
   async function sendProductDataToFirebase(productName, description) {
@@ -93,20 +95,23 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
+          price={'40,000 UGX'}
         />
         <Card
-          title="Flight Jackets"
+          title="T-Shirts"
           image={ModelsCard2}
           para={
-            'Elevate your style with our flight jackets. Crafted for adventure, designed for style'
+            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
+          price={'40,000 UGX'}
         />
         <Card
-          title="Varsity Jackets"
+          title="T-Shirts"
           image={ModelsCard3}
           para={
-            "Timeless design meets modern comfort. Discover Conspiracy's varsity jackets collection."
+            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
+          price={'40,000 UGX'}
         />
         <Card
           title="T-Shirts"
@@ -114,13 +119,15 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
+          price={'35,000 UGX'}
         />
         <Card
-          title="Leather Coats"
+          title="T-Shirts"
           image={ModelsCard5}
           para={
-            'Dress big, live large! Unleash your style with our killer oversized leather coats - because fashion should always be as bold as you are!'
+            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
+          price={'35,000 UGX'}
         />
         <Card
           title="T-Shirts"
@@ -128,7 +135,29 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
+          price={'35,000 UGX'}
         />
+      </div>
+
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginLeft: '10px',
+          marginRight: '10px',
+          marginTop: '100px',
+        }}
+      >
+        <p style={{ maxWidth: '700px' }}>
+          Step into style with our curated collection of fashion essentials.
+          From timeless classics to trendy must-haves, we've got you covered.
+          Explore the artistry of self-expression through our meticulously
+          crafted pieces, designed to empower and inspire your unique sense of
+          style. Elevate your wardrobe and make a statement with every step you
+          take.
+        </p>
       </div>
       {/* <Testimonials /> */}
       <Footer />

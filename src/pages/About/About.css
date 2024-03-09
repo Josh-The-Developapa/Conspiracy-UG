@@ -1,0 +1,67 @@
+.about-container {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-grid {
+    padding-top: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.image-container {
+  position: relative;
+  margin: 20px;
+}
+
+.tilted-image {
+  height: 500px;
+  width: 300px;
+  object-fit: cover;
+  transform: rotate(8deg);
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .tilted-image {
+  transform: rotate(0deg);
+}
+
+
+.overlayy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.8s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  height:100%;
+  width:100%;
+  cursor:pointer;
+}
+
+
+.image-container:hover .overlayy {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlayy:hover .check-out-text::after {
+  transform: scaleX(1);
+}

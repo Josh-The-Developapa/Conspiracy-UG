@@ -10,15 +10,12 @@ import Home from '../src/pages/Home/Home.jsx';
 import Footer from '../src/components/Footer/footer.jsx';
 import Products from './pages/Product/Products';
 import About from './pages/About/About';
+import ContextProvider from './Context/ContextProvider.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
-  },
-  {
-    path: 'products',
-    element: <Products />,
   },
 
   {
@@ -29,7 +26,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    {/* <Footer /> */}
+    <ContextProvider>
+      <RouterProvider router={router} />
+    </ContextProvider>
   </React.StrictMode>
 );

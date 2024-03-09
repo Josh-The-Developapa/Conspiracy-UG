@@ -14,14 +14,14 @@ function Card(props) {
         <div className="overlay">
           <span className="check-out-text" style={{ cursor: 'pointer' }}>
             <button style={{ color: 'white', background: 'none' }}>
-              Check out
+              Add to cart
             </button>
           </span>
         </div>
       )}
       <img className="card-img" src={props.image} alt={`${props.image}`} />
       <h2 style={{ color: 'white', marginBottom: '-15px', marginLeft: '20px' }}>
-        {props.title}
+        {props.title}: {props.price}
       </h2>
       <p style={{ marginLeft: '20px' }}>{props.para}</p>
     </div>
