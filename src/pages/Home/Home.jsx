@@ -74,7 +74,7 @@ function Home() {
       }}
     >
       <Header />
-      {/* <div className="models-pic"></div> */}
+      <div className="models-pic"></div>
       {/* <img src={Models} alt="Models-Pic" className="models-pic" /> */}
       <div
         style={{
