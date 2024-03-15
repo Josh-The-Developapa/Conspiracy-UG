@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
-import Models from '../../assets/Models.png';
+// import Models from '../../assets/Models.png';
 import Card from '../../components/Card/Card';
 // import ModelsCard5 from '../../assets/card-image1.png';
 import ModelsCard5 from '../../assets/card-image2.png';

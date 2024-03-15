@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
 import ShoppingBag from '../../assets/bag.png';
-import Favs from '../../assets/heart.png';
+// import Favs from '../../assets/heart.png';
 import ProfilePic from '../../assets/user.png';
 import Logo from '../../assets/Logo.png';
 import MenuPic from '../../assets/Menu.png';
