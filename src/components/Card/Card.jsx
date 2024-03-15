@@ -13,7 +13,10 @@ function Card(props) {
       {hovered && (
         <div className="overlay">
           <span className="check-out-text" style={{ cursor: 'pointer' }}>
-            <button style={{ color: 'white', background: 'none' }}>
+            <button
+              style={{ color: 'white', background: 'none' }}
+              className="addToCartBTN"
+            >
               Add to cart
             </button>
           </span>

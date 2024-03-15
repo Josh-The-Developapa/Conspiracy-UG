@@ -25,7 +25,7 @@
   min-height: 90vh; 
   /* Create the parallax scrolling effect */
   background-attachment:fixed; 
-  background-position: bottom bottom; 
+  background-position: center; 
   background-repeat: no-repeat;
   background-size:auto;
 }
@@ -33,6 +33,12 @@
 @media screen and (max-width:1000px){
   .cardDiv{
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width:605px){
+  .models-pic{
+    background-image: url(../../assets/riya-giveaway.png);
   }
 }
 

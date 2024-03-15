@@ -95,7 +95,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'40,000 UGX'}
+          price={'35,000 UGX'}
         />
         <Card
           title="T-Shirts"
@@ -103,7 +103,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'40,000 UGX'}
+          price={'35,000 UGX'}
         />
         <Card
           title="T-Shirts"
@@ -111,7 +111,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'40,000 UGX'}
+          price={'35,000 UGX'}
         />
         <Card
           title="T-Shirts"

@@ -41,6 +41,11 @@
   margin-bottom: 380px;
 }
 
+.addToCartBTN:hover{
+   border-color: white;
+  }
+
+
 .check-out-text::after {
   content: '';
   position: absolute;
@@ -62,7 +67,7 @@
   .cardd{
     margin-left:0px;
     margin-right:0px;
-    width:100%;
+    width:90%;
     padding-left:0px;
     padding-right:0px;
     margin-bottom:20px;

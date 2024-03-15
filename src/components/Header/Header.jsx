@@ -68,6 +68,7 @@ function Header() {
           ctx.setIsDropVal(true);
         }}
       ></img>
+      {/* <p style={{ marginLeft: '5px', marginRight: '5px' }}>Conspiracy UG</p> */}
       <div className="logo-container">
         <Link to="/" className="logo">
           {/* <h2 id="logo-h2" style={{ fontSize: '25px' }}>
@@ -77,7 +78,7 @@ function Header() {
         </Link>
       </div>
       <div className="nav-links">
-        <NavLink to="/" className="NavLink">
+        <NavLink to="/" className="NavLink" style={{ marginLeft: '50px' }}>
           Home
         </NavLink>
         {/* <NavLink to="/products" className="NavLink">
@@ -107,7 +108,7 @@ function Header() {
       </div>
       <div className="icons-container">
         <img src={ShoppingBag} className="icon" alt="Shopping Bag" />
-        <img src={Favs} className="icon" alt="Favourites" />
+        {/* <img src={Favs} className="icon" alt="Favourites" /> */}
         <img src={ProfilePic} className="icon" alt="User Profile" />
       </div>
     </div>

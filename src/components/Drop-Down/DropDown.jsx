@@ -16,16 +16,51 @@ function DropDown(props) {
         }}
       ></div>
       <div className="dropdown">
-        <NavLink to="/" style={{ marginTop: '15px' }}>
-          <img
-            src={Logo}
-            alt="header"
-            className="img"
-            onClick={() => {
-              ctx.setIsDropVal(false);
-            }}
-          />
+        <h2 style={{ marginLeft: '10px', marginRight: '10px' }}>
+          Conspiracy UG
+        </h2>
+        <NavLink
+          to="/"
+          style={{ marginTop: '15px' }}
+          className="NavLinkDropDown"
+          onClick={() => {
+            ctx.setIsDropVal(false);
+          }}
+        >
+          Home
         </NavLink>
+        <NavLink
+          to="/about"
+          style={{ marginTop: '15px' }}
+          className="NavLinkDropDown"
+          onClick={() => {
+            ctx.setIsDropVal(false);
+          }}
+        >
+          About
+        </NavLink>
+        <button
+          style={{
+            color: 'white',
+            border: '1px solid white',
+            marginTop: '20px',
+          }}
+        >
+          Account
+        </button>
+        <button
+          style={{
+            color: 'white',
+            border: '1px solid white',
+            marginTop: '20px',
+          }}
+        >
+          My Cart
+        </button>
+        <h4 style={{ marginTop: '300px' }}>
+          &copy; Conspiracy UG. <br />
+          All rights reserved
+        </h4>
       </div>
     </div>
   );
