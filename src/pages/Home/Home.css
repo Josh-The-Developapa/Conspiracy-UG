@@ -27,8 +27,11 @@
   background-attachment:fixed; 
   background-position: center; 
   background-repeat: no-repeat;
-  background-size:auto;
+  background-size:cover;
+  display:flex;
+  flex-direction: column;
 }
+
 
 @media screen and (max-width:1000px){
   .cardDiv{
@@ -38,7 +41,7 @@
 
 @media screen and (max-width:605px){
   .models-pic{
-    background-image: url(../../assets/riya-giveaway.png);
+    background-image: url(../../assets/card-image3.png);
   }
 }
 

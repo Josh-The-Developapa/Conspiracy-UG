@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
-import ShoppingBag from '../../assets/bag.png';
 // import Favs from '../../assets/heart.png';
-import ProfilePic from '../../assets/user.png';
 import Logo from '../../assets/Logo.png';
-import MenuPic from '../../assets/Menu.png';
 import Context from '../../Context/Context';
 import DropDown from '../Drop-Down/DropDown';
+import { FiMenu } from 'react-icons/fi';
+import { FaShoppingBag, FaUser } from 'react-icons/fa';
+import { CiSearch } from 'react-icons/ci';
 
 function Header() {
   const ctx = useContext(Context);
@@ -61,13 +61,12 @@ function Header() {
   return (
     <div className="header">
       {ctx.isDrop ? <DropDown /> : ''}
-      <img
-        src={MenuPic}
+      <FiMenu
         className="Menu-icon"
         onClick={() => {
           ctx.setIsDropVal(true);
         }}
-      ></img>
+      />
       {/* <p style={{ marginLeft: '5px', marginRight: '5px' }}>Conspiracy UG</p> */}
       <div className="logo-container">
         <Link to="/" className="logo">
@@ -89,6 +88,9 @@ function Header() {
         </NavLink>
       </div>
       <div className="search-container">
+        <CiSearch
+          style={{ height: '45px', width: '30px', cursor: 'pointer' }}
+        />
         <input
           type="text"
           placeholder="Search for products..."
@@ -107,9 +109,18 @@ function Header() {
         </div>
       </div>
       <div className="icons-container">
-        <img src={ShoppingBag} className="icon" alt="Shopping Bag" />
+        <FaShoppingBag className="icon" />
         {/* <img src={Favs} className="icon" alt="Favourites" /> */}
-        <img src={ProfilePic} className="icon" alt="User Profile" />
+        <FaUser className="icon" />
+        <button
+          style={{
+            color: 'white',
+            border: '1px solid white',
+            marginLeft: '20px',
+          }}
+        >
+          Login
+        </button>
       </div>
     </div>
   );

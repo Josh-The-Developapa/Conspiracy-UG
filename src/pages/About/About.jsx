@@ -10,6 +10,7 @@ import Image6 from '../../assets/card-image7.png';
 import Image9 from '../../assets/card-image3.webp';
 import Image10 from '../../assets/card-image2.webp';
 import Footer from '../../components/Footer/footer';
+import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
 const About = () => {
   return (
@@ -25,6 +26,7 @@ const About = () => {
       }}
     >
       <Header />
+      <ScrollDownButton />
       <div className="image-grid1">
         <div className="image-container1">
           <img

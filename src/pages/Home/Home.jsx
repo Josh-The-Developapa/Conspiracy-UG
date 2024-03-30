@@ -1,22 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
-// import Models from '../../assets/Models.png';
 import Card from '../../components/Card/Card';
-// import ModelsCard5 from '../../assets/card-image1.png';
 import ModelsCard5 from '../../assets/card-image2.png';
-// import ModelsCard5 from '../../assets/card-image8.jpeg';
 import ModelsCard1 from '../../assets/card-image7.png';
 import ModelsCard4 from '../../assets/card-image4.png';
-// import ModelsCard3 from '../../assets/card-image5.png';
 import ModelsCard3 from '../../assets/riya-giveaway.png';
 import ModelsCard6 from '../../assets/card-image6.png';
-
-// import ModelsCard2 from '../../assets/card-image2.webp';
 import ModelsCard2 from '../../assets/card-image3.png';
-// import ModelsCard3 from '../../assets/card-image3.webp';
 import Footer from '../../components/Footer/footer';
-import Testimonials from '../../components/Testimonials/Testimonials';
+import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
 function Home() {
   async function sendProductDataToFirebase(productName, description) {
@@ -55,7 +48,6 @@ function Home() {
       // Handle error
     }
   }
-
   // sendProductDataToFirebase(
   //   'T-Shirts',
   //   'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
@@ -74,7 +66,10 @@ function Home() {
       }}
     >
       <Header />
-      <div className="models-pic"></div>
+      <div className="models-pic">
+        <ScrollDownButton />
+      </div>
+
       {/* <img src={Models} alt="Models-Pic" className="models-pic" /> */}
       <div
         style={{
@@ -159,7 +154,8 @@ function Home() {
           take.
         </p>
       </div>
-      {/* <Testimonials /> */}
+      {/* <button style={{ backgroundColor: 'green', borderRadius: '25px' }}> */}
+      {/* </button> */}
       <Footer />
     </div>
   );

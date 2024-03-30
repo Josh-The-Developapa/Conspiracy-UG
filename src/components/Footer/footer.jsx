@@ -1,9 +1,10 @@
 import React from 'react';
 import './footer.css'; // Import custom footer styles if needed
-import Instapic from '../../assets/instagram-pic.png';
-import YoutubePic from '../../assets/youtube-pic.png';
-import EmailPic from '../../assets/email-pic.png';
+
+import { FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { MdOutlineEmail } from 'react-icons/md';
+import { PiYoutubeLogoLight } from 'react-icons/pi';
 
 function Footer() {
   const year = new Date(Date.now()).getFullYear();
@@ -23,11 +24,7 @@ function Footer() {
           }}
           className="footer-social-div"
         >
-          <img
-            src={Instapic}
-            alt="Insta-pic"
-            style={{ height: '50px', width: '50px', objectFit: 'contain' }}
-          />
+          <FaInstagram style={{ height: '35px', width: '35px' }} />
           <Link
             to="https://www.instagram.com/conspiracyug/"
             className="social-link"
@@ -47,11 +44,7 @@ function Footer() {
           }}
           className="footer-social-div"
         >
-          <img
-            src={YoutubePic}
-            alt="Youtube-pic"
-            style={{ height: '50px', width: '50px', objectFit: 'contain' }}
-          />
+          <PiYoutubeLogoLight style={{ height: '40px', width: '40px' }} />
           <Link
             to="https://youtube.com/conspiracy"
             target="_blank"
@@ -70,11 +63,7 @@ function Footer() {
           }}
           className="footer-social-div"
         >
-          <img
-            src={EmailPic}
-            alt="Email-pic"
-            style={{ height: '50px', width: '50px', objectFit: 'contain' }}
-          />
+          <MdOutlineEmail style={{ height: '40px', width: '40px' }} />
           <a
             href="mailto:conspiracy.uganda@gmail.com"
             className="social-link"

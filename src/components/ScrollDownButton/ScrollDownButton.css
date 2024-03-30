@@ -1,0 +1,22 @@
+.scrollDownBtn {
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  bottom: 10px;
+  z-index: 1;
+  right: 10px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50px;
+  color: #000000;
+  animation: bounce 0.7s infinite alternate; /* Add animation property */
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px); /* Adjust bounce height as needed */
+  }
+}

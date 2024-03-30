@@ -24,7 +24,7 @@
 }
 
 .tilted-image1 {
-  width: 100%;
+  width: 95%;
   height: auto;
   object-fit: cover;
   transform: rotate(3deg);
