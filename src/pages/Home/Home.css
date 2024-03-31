@@ -33,11 +33,11 @@
 }
 
 
-@media screen and (max-width:1000px){
+/* @media screen and (max-width:1000px){
   .cardDiv{
     flex-direction: column;
   }
-}
+} */
 
 @media screen and (max-width:605px){
   .models-pic{

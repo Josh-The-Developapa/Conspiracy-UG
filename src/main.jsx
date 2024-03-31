@@ -7,8 +7,6 @@ import {
   Navigate,
 } from 'react-router-dom';
 import Home from '../src/pages/Home/Home.jsx';
-import Footer from '../src/components/Footer/footer.jsx';
-import Products from './pages/Product/Products';
 import About from './pages/About/About';
 import ContextProvider from './Context/ContextProvider.jsx';
 
