@@ -1,3 +1,14 @@
+.about-page-container{
+color: white;
+width: 100vw;
+position: absolute;
+height: 100vh;
+top: 0;
+left: 0;
+
+}
+
+
 .about-container1 {
   background-color: #282c34;
   color: white;
@@ -12,23 +23,26 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 20px;
-  margin-top: 85px;
+  padding: 10px;
+  background-color: #000000;
+  cursor:pointer;
 }
 
 .image-container1 {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tilted-image1 {
-  width: 95%;
+  width: 98%;
+  margin: 5px;
   height: auto;
   object-fit: cover;
-  transform: rotate(3deg);
   transition: transform 0.3s ease;
+  border-radius: 25px;
+  
 }
 
 .image-container1:hover .tilted-image1 {
@@ -42,14 +56,17 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 25px 25px;
   text-align: center;
   transform: translateY(100%);
   transition: transform 0.3s ease;
+  width:98%;
+
 }
 
 .image-container1:hover .overlay1 {
   transform: translateY(0%);
+  /* background-image: url(../../assets/Models-pic.png); */
 }
 
 .overlay1 p {

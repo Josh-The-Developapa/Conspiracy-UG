@@ -67,45 +67,54 @@ function Header() {
           ctx.setIsDropVal(true);
         }}
       />
-      {/* <p style={{ marginLeft: '5px', marginRight: '5px' }}>Conspiracy UG</p> */}
       <div className="logo-container">
         <Link to="/" className="logo">
-          {/* <h2 id="logo-h2" style={{ fontSize: '25px' }}>
-            Conspiracy UG
-          </h2> */}
-          <img src={Logo} style={{ height: '65px', width: '150px' }} />
+          <img src={Logo} style={{ height: '60px', width: '140px' }} />
         </Link>
+        <p
+          style={{ marginLeft: '5px', fontSize: '13px', marginBottom: '50px' }}
+          // className="footer-heading"
+        >
+          UG
+        </p>
       </div>
-      <div className="nav-links">
-        <NavLink to="/" className="NavLink" style={{ marginLeft: '50px' }}>
-          Home
-        </NavLink>
-        {/* <NavLink to="/products" className="NavLink">
+      <div className="central-header-div">
+        <div className="nav-links">
+          <NavLink to="/" className="NavLink" style={{ marginLeft: '50px' }}>
+            Home
+          </NavLink>
+          {/* <NavLink to="/products" className="NavLink">
           Products
         </NavLink> */}
-        <NavLink to="/about" className="NavLink">
-          About Us
-        </NavLink>
-      </div>
-      <div className="search-container">
-        <CiSearch
-          style={{ height: '45px', width: '30px', cursor: 'pointer' }}
-        />
-        <input
-          type="text"
-          placeholder="Search for products..."
-          className="search-box"
-          value={searchTerm}
-          onChange={handleChange}
-        />
-        <div className="search-underline"></div>
-        <div className="search-results">
-          {filteredProducts.map((product) => (
-            <div key={product.id} className="search-item">
-              <p>{product.productName}</p>
-              {/* <p>{product.description}</p> */}
-            </div>
-          ))}
+          <NavLink to="/about" className="NavLink">
+            About Us
+          </NavLink>
+        </div>
+        <div className="search-container">
+          <CiSearch
+            style={{
+              height: '28px',
+              width: '28px',
+              cursor: 'pointer',
+              // backgroundColor: 'green',
+            }}
+          />
+          <input
+            type="text"
+            placeholder="Search for products..."
+            className="search-box"
+            value={searchTerm}
+            onChange={handleChange}
+          />
+          <div className="search-underline"></div>
+          <div className="search-results">
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="search-item">
+                <p>{product.productName}</p>
+                {/* <p>{product.description}</p> */}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="icons-container">

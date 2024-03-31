@@ -7,8 +7,7 @@ function ScrollDownButton() {
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    const scrollThreshold = window.innerHeight * 0.5; // Adjust the multiplier as needed
-    if (scrolled > scrollThreshold) {
+    if (scrolled > 833) {
       setVisible(false);
     } else {
       setVisible(true);

@@ -8,6 +8,7 @@ import ModelsCard4 from '../../assets/card-image4.png';
 import ModelsCard3 from '../../assets/riya-giveaway.png';
 import ModelsCard6 from '../../assets/card-image6.png';
 import ModelsCard2 from '../../assets/card-image3.png';
+import ModelsCard7 from '../../assets/Models-pic.png';
 import Footer from '../../components/Footer/footer';
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
@@ -132,27 +133,30 @@ function Home() {
           }
           price={'35,000 UGX'}
         />
-      </div>
-
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginLeft: '10px',
-          marginRight: '10px',
-          marginTop: '100px',
-        }}
-      >
-        <p style={{ maxWidth: '700px' }}>
-          Step into style with our curated collection of fashion essentials.
-          From timeless classics to trendy must-haves, we've got you covered.
-          Explore the artistry of self-expression through our meticulously
-          crafted pieces, designed to empower and inspire your unique sense of
-          style. Elevate your wardrobe and make a statement with every step you
-          take.
-        </p>
+        <Card
+          title="T-Shirts"
+          image={ModelsCard7}
+          para={
+            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
+          }
+          price={'35,000 UGX'}
+        />
+        <Card
+          title="T-Shirts"
+          image={ModelsCard7}
+          para={
+            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
+          }
+          price={'35,000 UGX'}
+        />
+        <Card
+          title="T-Shirts"
+          image={ModelsCard7}
+          para={
+            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
+          }
+          price={'35,000 UGX'}
+        />
       </div>
       {/* <button style={{ backgroundColor: 'green', borderRadius: '25px' }}> */}
       {/* </button> */}

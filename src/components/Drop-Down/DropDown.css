@@ -58,7 +58,7 @@
   height: 100px;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 906px) {
   .dropdown {
     display: none;
   }

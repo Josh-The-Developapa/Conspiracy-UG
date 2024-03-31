@@ -46,7 +46,7 @@ function DropDown(props) {
             marginTop: '20px',
           }}
         >
-          Account
+          Login
         </button>
         <button
           style={{
