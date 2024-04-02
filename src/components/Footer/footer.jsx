@@ -24,13 +24,19 @@ function Footer() {
           }}
           className="footer-social-div"
         >
-          <FaInstagram style={{ height: '35px', width: '35px' }} />
           <Link
             to="https://www.instagram.com/conspiracyug/"
             className="social-link"
             id="social-link1"
             target="_blank"
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
           >
+            <FaInstagram style={{ height: '35px', width: '35px' }} />
             <i className="fab fa-instagram"></i> Instagram
           </Link>
         </div>
@@ -44,13 +50,19 @@ function Footer() {
           }}
           className="footer-social-div"
         >
-          <PiYoutubeLogoLight style={{ height: '40px', width: '40px' }} />
           <Link
             to="https://youtube.com/conspiracy"
             target="_blank"
             className="social-link"
             id="social-link2"
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
           >
+            <PiYoutubeLogoLight style={{ height: '40px', width: '40px' }} />
             <i className="fab fa-youtube"></i> YouTube
           </Link>
         </div>
@@ -63,12 +75,18 @@ function Footer() {
           }}
           className="footer-social-div"
         >
-          <MdOutlineEmail style={{ height: '40px', width: '40px' }} />
           <a
             href="mailto:conspiracy.uganda@gmail.com"
             className="social-link"
             id="social-link3"
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
           >
+            <MdOutlineEmail style={{ height: '40px', width: '40px' }} />
             <i className="fas fa-envelope"></i> Email us
           </a>
         </div>

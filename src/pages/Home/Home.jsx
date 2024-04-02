@@ -135,7 +135,7 @@ function Home() {
       </div>
       <div className="cardDiv">
         <Card
-          title="Conspiracy Dreams"
+          title="The Seer"
           image={ModelsCard1}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'

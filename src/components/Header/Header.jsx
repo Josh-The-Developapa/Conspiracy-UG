@@ -1,48 +1,76 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
-// import Favs from '../../assets/heart.png';
 import Logo from '../../assets/Logo.png';
 import Context from '../../Context/Context';
 import DropDown from '../Drop-Down/DropDown';
 import { FiMenu } from 'react-icons/fi';
 import { FaShoppingBag, FaUser } from 'react-icons/fa';
 import { CiSearch } from 'react-icons/ci';
+import ModelsCard5 from '../../assets/card-image2.png';
+import ModelsCard1 from '../../assets/card-image7.png';
+import ModelsCard4 from '../../assets/card-image4.png';
+import ModelsCard3 from '../../assets/riya-giveaway.png';
+import ModelsCard6 from '../../assets/card-image6.png';
+import ModelsCard2 from '../../assets/card-image3.png';
+import ModelsCard7 from '../../assets/Models-pic.png';
 
 import Cart from '../Cart/Cart.jsx';
 
 function Header() {
   const ctx = useContext(Context);
   const [searchTerm, setSearchTerm] = useState('');
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([
+    {
+      id: 1,
+      title: 'The Seer',
+      image: ModelsCard1,
+      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+      price: 35000,
+    },
+    {
+      id: 2,
+      title: 'Viper-T',
+      image: ModelsCard2,
+      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+      price: 35000,
+    },
+    {
+      id: 3,
+      title: 'T-Shirt 3',
+      image: ModelsCard3,
+      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+      price: 35000,
+    },
+    {
+      id: 4,
+      title: 'T-Shirt 4',
+      image: ModelsCard4,
+      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+      price: 35000,
+    },
+    {
+      id: 5,
+      title: 'T-Shirt 5',
+      image: ModelsCard5,
+      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+      price: 35000,
+    },
+    {
+      id: 6,
+      title: 'T-Shirt 6',
+      image: ModelsCard6,
+      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+      price: 35000,
+    },
+
+    // Add more product objects here...
+  ]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         'https://conspiracy-67f09-default-rtdb.firebaseio.com/products.json'
-  //       );
-  //       if (!response.ok) {
-  //         console.log('Failed to fetch products');
-  //         throw new Error('Failed to fetch products');
-  //       }
-  //       const data = await response.json();
-  //       const loadedProducts = [];
-  //       for (const key in data) {
-  //         loadedProducts.push({
-  //           id: key,
-  //           productName: data[key].productName,
-  //           description: data[key].description,
-  //         });
-  //       }
-  //       setProducts(loadedProducts);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-  //   fetchProducts();
-  // }, []);
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
   useEffect(() => {
     if (searchTerm === '') {
@@ -51,14 +79,10 @@ function Header() {
     }
 
     const filteredResults = products.filter((product) =>
-      product.productName.toLowerCase().includes(searchTerm.toLowerCase())
+      product.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredProducts(filteredResults);
   }, [searchTerm, products]);
-
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
 
   return (
     <div className="header">
@@ -74,21 +98,12 @@ function Header() {
         <Link to="/" className="logo">
           <img src={Logo} style={{ height: '60px', width: '140px' }} />
         </Link>
-        {/* <p
-          style={{ marginLeft: '5px', fontSize: '13px', marginBottom: '50px' }}
-          // className="footer-heading"
-        >
-          UG
-        </p> */}
       </div>
       <div className="central-header-div">
         <div className="nav-links">
           <NavLink to="/" className="NavLink" style={{ marginLeft: '50px' }}>
             Home
           </NavLink>
-          {/* <NavLink to="/products" className="NavLink">
-          Products
-        </NavLink> */}
           <NavLink to="/about" className="NavLink">
             About Us
           </NavLink>
@@ -99,7 +114,6 @@ function Header() {
               height: '28px',
               width: '28px',
               cursor: 'pointer',
-              // backgroundColor: 'green',
             }}
           />
           <input
@@ -112,9 +126,28 @@ function Header() {
           <div className="search-underline"></div>
           <div className="search-results">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="search-item">
-                <p>{product.productName}</p>
-                {/* <p>{product.description}</p> */}
+              <div
+                key={product.id}
+                className="search-item"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="product-image"
+                  style={{
+                    height: '50px',
+                    width: '50px',
+                    borderRadius: '50px',
+                    objectFit: 'cover',
+                  }}
+                />
+                <p style={{ marginLeft: '10px' }}>{product.title}</p>
               </div>
             ))}
           </div>
@@ -131,7 +164,6 @@ function Header() {
           />
           <div className="hover-ring"></div>
         </div>
-        {/* <img src={Favs} className="icon" alt="Favourites" /> */}
         <div className="icon-container">
           <FaUser className="icon" />
           <div className="hover-ring"></div>

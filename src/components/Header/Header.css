@@ -233,3 +233,36 @@
     border-color: white; /* End with white border color */
   }
 }
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 20px 20px;
+  z-index: 1;
+  overflow-y: auto;
+  backdrop-filter: blur(8px);
+}
+
+.search-item {
+  padding: 10px;
+  border-bottom: 2px solid #333; /* Change border color */
+  color: white; /* Text color */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+.search-item:hover {
+  background-color: #222; /* Change background color on hover */
+}
+
+.search-item p {
+  margin: 0; /* Remove default paragraph margin */
+}
+
+.search-item:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
