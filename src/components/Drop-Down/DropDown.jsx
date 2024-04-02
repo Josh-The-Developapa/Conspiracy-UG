@@ -54,6 +54,10 @@ function DropDown(props) {
             border: '1px solid white',
             marginTop: '20px',
           }}
+          onClick={() => {
+            ctx.setIsDropVal(false);
+            ctx.setModalVal(true);
+          }}
         >
           My Cart
         </button>

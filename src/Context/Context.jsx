@@ -1,8 +1,10 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
 const Context = createContext({
-    isDrop: false,
-    setIsDropVal: () => { },
+  isDrop: false,
+  modal: false,
+  setModalVal: () => {},
+  setIsDropVal: () => {},
 });
 
 export default Context;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
@@ -10,6 +10,7 @@ import ModelsCard6 from '../../assets/card-image6.png';
 import ModelsCard2 from '../../assets/card-image3.png';
 import ModelsCard7 from '../../assets/Models-pic.png';
 import Footer from '../../components/Footer/footer';
+// import Models from '../../assets/Models-pic.png'
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
 function Home() {
@@ -54,6 +55,54 @@ function Home() {
   //   'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
   // );
 
+  // const products = [
+  //   {
+  //     title: 'T-Shirts',
+  //     para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+  //     price: '35,000 UGX',
+  //   },
+  //   {
+  //     title: 'T-Shirts',
+  //     para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+  //     price: '35,000 UGX',
+  //   },
+  //   {
+  //     title: 'T-Shirts',
+  //     para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+  //     price: '35,000 UGX',
+  //   },
+  //   {
+  //     title: 'T-Shirts',
+  //     para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+  //     price: '35,000 UGX',
+  //   },
+  //   {
+  //     title: 'T-Shirts',
+  //     para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+  //     price: '35,000 UGX',
+  //   },
+  //   {
+  //     title: 'T-Shirts',
+  //     para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+  //     price: '35,000 UGX',
+  //   },
+  //   {
+  //     title: 'T-Shirts',
+  //     para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+  //     price: '35,000 UGX',
+  //   },
+  //   {
+  //     title: 'T-Shirts',
+  //     para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+  //     price: '35,000 UGX',
+  //   },
+  //   {
+  //     title: 'T-Shirts',
+  //     para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+  //     price: '35,000 UGX',
+  //   },
+  // ];
+
   return (
     <div
       style={{
@@ -86,76 +135,76 @@ function Home() {
       </div>
       <div className="cardDiv">
         <Card
-          title="T-Shirts"
+          title="Conspiracy Dreams"
           image={ModelsCard1}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'35,000 UGX'}
+          price={35000}
         />
         <Card
-          title="T-Shirts"
+          title="Viper-T"
           image={ModelsCard2}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'35,000 UGX'}
+          price={35000}
         />
         <Card
-          title="T-Shirts"
+          title="Enigma"
           image={ModelsCard3}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'35,000 UGX'}
+          price={35000}
         />
         <Card
-          title="T-Shirts"
+          title="T-Shirt 4"
           image={ModelsCard4}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'35,000 UGX'}
+          price={35000}
         />
         <Card
-          title="T-Shirts"
+          title="T-Shirt 5"
           image={ModelsCard5}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'35,000 UGX'}
+          price={35000}
         />
         <Card
-          title="T-Shirts"
+          title="T-Shirt 6"
           image={ModelsCard6}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'35,000 UGX'}
+          price={35000}
         />
         <Card
-          title="T-Shirts"
+          title="T-Shirt 7"
           image={ModelsCard7}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'35,000 UGX'}
+          price={35000}
         />
         <Card
-          title="T-Shirts"
+          title="T-Shirt 8"
           image={ModelsCard7}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'35,000 UGX'}
+          price={35000}
         />
         <Card
-          title="T-Shirts"
+          title="T-Shirt 9"
           image={ModelsCard7}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={'35,000 UGX'}
+          price={35000}
         />
       </div>
       {/* <button style={{ backgroundColor: 'green', borderRadius: '25px' }}> */}

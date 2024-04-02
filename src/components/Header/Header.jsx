@@ -9,6 +9,8 @@ import { FiMenu } from 'react-icons/fi';
 import { FaShoppingBag, FaUser } from 'react-icons/fa';
 import { CiSearch } from 'react-icons/ci';
 
+import Cart from '../Cart/Cart.jsx';
+
 function Header() {
   const ctx = useContext(Context);
   const [searchTerm, setSearchTerm] = useState('');
@@ -61,6 +63,7 @@ function Header() {
   return (
     <div className="header">
       {ctx.isDrop ? <DropDown /> : ''}
+      {ctx.modal ? <Cart /> : ''}
       <FiMenu
         className="Menu-icon"
         onClick={() => {
@@ -71,12 +74,12 @@ function Header() {
         <Link to="/" className="logo">
           <img src={Logo} style={{ height: '60px', width: '140px' }} />
         </Link>
-        <p
+        {/* <p
           style={{ marginLeft: '5px', fontSize: '13px', marginBottom: '50px' }}
           // className="footer-heading"
         >
           UG
-        </p>
+        </p> */}
       </div>
       <div className="central-header-div">
         <div className="nav-links">
@@ -118,9 +121,21 @@ function Header() {
         </div>
       </div>
       <div className="icons-container">
-        <FaShoppingBag className="icon" />
+        <div className="icon-container" style={{ marginRight: '5px' }}>
+          <FaShoppingBag
+            className="icon"
+            onClick={() => {
+              ctx.setModalVal(true);
+            }}
+            title="Shopping Cart"
+          />
+          <div className="hover-ring"></div>
+        </div>
         {/* <img src={Favs} className="icon" alt="Favourites" /> */}
-        <FaUser className="icon" />
+        <div className="icon-container">
+          <FaUser className="icon" />
+          <div className="hover-ring"></div>
+        </div>
         <button
           style={{
             color: 'white',

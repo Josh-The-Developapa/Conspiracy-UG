@@ -39,7 +39,7 @@
   }
 } */
 
-@media screen and (max-width:605px){
+@media screen and (max-width:680px){
   .models-pic{
     background-image: url(../../assets/card-image3.png);
   }
