@@ -7,7 +7,7 @@ import Image3 from '../../assets/card-image3.png';
 import Image4 from '../../assets/riya-giveaway.png';
 import Image8 from '../../assets/card-image6.png';
 import Image6 from '../../assets/card-image7.png';
-import Image11 from '../../assets/Hullabaloo.jpg';
+import Image11 from '../../assets/Models-pic.png';
 import Footer from '../../components/Footer/footer';
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
@@ -44,8 +44,8 @@ const About = () => {
         <div className="overlay1">
           <h2>Our Team</h2>
           <p>
-            Take a look at all the players, managers, executives that bring you
-            the Hungry Hooligans Hoofball Hullabaloo Lunch Time League
+            Check out our amazing squad, from our cool models to our top-tier
+            shareholders, all coming together to unleash, Conspiracy.
             {/* <br />
             <br />
             Faizan Yousuf, Keon Walusimbi, Lionel Agaba, Bilal Ahmed, Sanyam
