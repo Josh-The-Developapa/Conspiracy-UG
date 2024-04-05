@@ -1,20 +1,30 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Context from '../../Context/Context';
+import Context from '../../Context/Context.jsx';
 import { IoMdTrash } from 'react-icons/io';
 import { FiCheckCircle } from 'react-icons/fi';
+import { FaSpinner } from 'react-icons/fa';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { IoIosAddCircle } from 'react-icons/io';
+import { IoMdArrowDropupCircle } from 'react-icons/io';
+
 import './Cart.css';
 
 function Cart() {
   const ctx = useContext(Context);
   const [cartItems, setCartItems] = useState([]);
+  const [discount, setDiscount] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [coupon, setCoupon] = useState('');
+  const [error, setError] = useState('');
+  const [checkoutComplete, setCheckoutComplete] = useState(false);
+  const [addressExpanded, setAddressExpanded] = useState(false); // State to track address section expansion
   const [address, setAddress] = useState({
-    city: '',
+    fullName: '',
+    cityTown: '', // Removed stateProvince
     street: '',
     country: 'Uganda',
     phoneNumber: '',
   });
-  const [error, setError] = useState('');
-  const [checkoutComplete, setCheckoutComplete] = useState(false);
 
   useEffect(() => {
     if (!localStorage.getItem('CartItems')) return;
@@ -26,6 +36,25 @@ function Cart() {
     updatedCartItems[index].quantity = newQuantity;
     setCartItems(updatedCartItems);
     localStorage.setItem('CartItems', JSON.stringify(updatedCartItems));
+  };
+
+  const handleCouponVerification = async () => {
+    const couponData = await fetchCouponData();
+    if (coupon.trim() == '') {
+      setDiscount(0);
+      setError('');
+      return;
+    }
+    for (let i in couponData) {
+      if (coupon.trim() == couponData[i].couponName) {
+        setError(`Valid Coupon. ${couponData[i].discount}% discount applied`);
+        setDiscount(couponData[i].discount);
+        return;
+      }
+    }
+    setDiscount(0);
+    setError('Invalid coupon. No discount applied');
+    return;
   };
 
   const handleDeleteItem = (index) => {
@@ -48,20 +77,33 @@ function Cart() {
   const handleAddressChange = (e) => {
     const { name, value } = e.target;
     setAddress({ ...address, [name]: value });
+    setError('');
   };
 
-  const handleCheckout = () => {
-    if (!address.city || !address.street || !address.phoneNumber) {
-      setError('Please fill in all required fields.');
+  const handleCouponChange = (e) => {
+    setCoupon(e.target.value);
+  };
+
+  const handleCheckout = async () => {
+    if (cartItems.length == 0) {
+      setError('Please add some items to cart first');
+      return;
+    }
+
+    setLoading(true);
+
+    if (!address.cityTown || !address.street || !address.phoneNumber) {
+      setError('Please fill in all the above fields.');
+      setLoading(false); // Reset loading state
     } else {
       setError('');
       const checkoutData = {
         cartItems: cartItems,
         address: address,
-        // city: address.city,
-        // phoneNumber: address.phoneNumber,
         totalShirts: computeCost(cartItems).totalQuantity,
-        totalCost: computeCost(cartItems).totalCost,
+        totalCost:
+          computeCost(cartItems).totalCost * (1 - Number(discount) / 100),
+        coupon: coupon,
       };
 
       // Send data to Firebase
@@ -77,14 +119,46 @@ function Cart() {
       )
         .then((response) => response.json())
         .then((data) => {
-          console.log('Checkout complete:', data);
+          // console.log('Checkout complete:', data);
           setCheckoutComplete(true);
+          setLoading(false); // Reset loading state
         })
         .catch((error) => {
           console.error('Error:', error);
+          setLoading(false); // Reset loading state
         });
     }
   };
+
+  async function fetchCouponData() {
+    // Firebase URL
+    const firebaseUrl =
+      'https://conspiracy-67f09-default-rtdb.firebaseio.com/coupons.json';
+
+    // Request options
+    const requestOptions = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    try {
+      // Make the fetch request
+      const response = await fetch(firebaseUrl, requestOptions);
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const responseData = await response.json();
+      return responseData;
+      // Handle success
+    } catch (error) {
+      return 'Error sending data to Firebase:';
+      // Handle error
+    }
+  }
 
   return (
     <div className="modal-container">
@@ -113,7 +187,6 @@ function Cart() {
                   <input
                     type="number"
                     min="1"
-                    // max="10"
                     step="1"
                     value={item.quantity}
                     onChange={(e) =>
@@ -132,29 +205,107 @@ function Cart() {
           )}
         </div>
         <div className="address-section">
-          <h3>Delivery Address</h3>
-          <input
-            type="text"
-            name="city"
-            placeholder="City"
-            value={address.city}
-            onChange={handleAddressChange}
-          />
-          <input
-            type="text"
-            name="street"
-            placeholder="Street"
-            value={address.street}
-            onChange={handleAddressChange}
-          />
-          <input
-            type="tel"
-            name="phoneNumber"
-            placeholder="Phone Number"
-            value={address.phoneNumber}
-            onChange={handleAddressChange}
-          />
-          {error && <p style={{ color: 'red', margin: '5px 0' }}>{error}</p>}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <h3>Add Delivery Address {/* <span> */}</h3>
+            {addressExpanded ? (
+              <IoMdArrowDropupCircle
+                title="collapse"
+                style={{
+                  color: '#000000',
+                  height: '35px',
+                  width: '35px',
+                  marginLeft: '10px',
+                  cursor: 'pointer',
+                }}
+                onClick={() => setAddressExpanded(!addressExpanded)}
+              />
+            ) : (
+              <IoIosAddCircle
+                title="expand"
+                style={{
+                  color: '#000000',
+                  height: '35px',
+                  width: '35px',
+                  marginLeft: '10px',
+                  cursor: 'pointer',
+                }}
+                onClick={() => setAddressExpanded(!addressExpanded)}
+              />
+            )}
+          </div>
+          {/* </span> */}
+          {addressExpanded && ( // Render input fields if address section is expanded
+            <>
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                value={address.fullName}
+                onChange={handleAddressChange}
+              />
+              <input
+                type="text"
+                name="cityTown"
+                placeholder="City or Town"
+                value={address.cityTown}
+                onChange={handleAddressChange}
+              />
+              <input
+                type="text"
+                name="street"
+                placeholder="Street"
+                value={address.street}
+                onChange={handleAddressChange}
+              />
+              <input
+                type="tel"
+                name="phoneNumber"
+                placeholder="Phone Number"
+                value={address.phoneNumber}
+                onChange={handleAddressChange}
+              />
+            </>
+          )}
+          {/* <label style={{ color: 'black' }}>Enter Coupon:</label> */}
+          <div>
+            <input
+              type="text"
+              name="coupon"
+              placeholder="Enter Coupon - Optional"
+              value={coupon}
+              onChange={handleCouponChange}
+              style={{ marginBottom: '-5px', width: '50%' }}
+            />{' '}
+            <button onClick={handleCouponVerification} className="verify-btn">
+              Verify
+            </button>
+          </div>
+          {error && error.trim().includes('Valid') ? (
+            <p
+              style={{
+                color: 'green',
+                marginTop: '5px',
+                marginBottom: '5px',
+              }}
+            >
+              {error}
+            </p>
+          ) : (
+            <p
+              style={{
+                color: 'red',
+                marginTop: '5px',
+                marginBottom: '5px',
+              }}
+            >
+              {error}
+            </p>
+          )}
           <div className="total-info">
             <h3>
               Total Shirts:{' '}
@@ -162,16 +313,24 @@ function Cart() {
             </h3>
             <h3>
               Total Cost:{' '}
-              {computeCost(cartItems).totalCost.toLocaleString('en-US')} UGX
+              {(
+                computeCost(cartItems).totalCost *
+                (1 - Number(discount) / 100)
+              ).toLocaleString('en-US')}{' '}
+              UGX
             </h3>
             {!checkoutComplete ? (
               <button className="checkout-btn" onClick={handleCheckout}>
-                Confirm Order
+                {loading ? (
+                  <AiOutlineLoading3Quarters className="loading-icon" />
+                ) : (
+                  'Confirm Order'
+                )}
               </button>
             ) : (
               <div className="checkout-complete">
-                <FiCheckCircle className="checkout-icon" s />
-                <span>Order sent</span>
+                <FiCheckCircle className="checkout-icon" />
+                <span style={{ marginLeft: '10px' }}>Order sent</span>
               </div>
             )}
           </div>

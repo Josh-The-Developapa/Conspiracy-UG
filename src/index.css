@@ -21,6 +21,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+input{
+   font-family: 'Montserrat', sans-serif;
+}
+
 a {
   /* font-weight: 500; */
   color: white;

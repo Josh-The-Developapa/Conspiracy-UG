@@ -144,6 +144,36 @@ const About = () => {
             </p>
           </div>
         </div>
+        <div className="image-container1">
+          <img
+            src={Image6}
+            alt="Clothing"
+            className="tilted-image1"
+            style={{ zIndex: 6, height: '500px' }}
+          />
+          <div className="overlay1">
+            <h2>Winter Styles</h2>
+            <p>
+              Take a look at our awesome team, from models to top level
+              shareholders, all working together to bring forth conspiracy
+            </p>
+          </div>
+        </div>
+        <div className="image-container1">
+          <img
+            src={Image6}
+            alt="Clothing"
+            className="tilted-image1"
+            style={{ zIndex: 6, height: '500px' }}
+          />
+          <div className="overlay1">
+            <h2>Winter Styles</h2>
+            <p>
+              Take a look at our awesome team, from models to top level
+              shareholders, all working together to bring forth conspiracy
+            </p>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>

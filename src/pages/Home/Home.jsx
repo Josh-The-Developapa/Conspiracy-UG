@@ -131,6 +131,8 @@ function Home() {
         <h2 style={{ fontSize: '35px' }}>Check Out Our Latest Collections</h2>
         <p style={{ fontSize: '20px' }}>
           Discover trendy outfits for every occasion. <br />
+          <br />
+          Tap the images to add to them cart
         </p>
       </div>
       <div className="cardDiv">

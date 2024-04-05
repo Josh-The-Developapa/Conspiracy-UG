@@ -39,7 +39,7 @@ function DropDown(props) {
         >
           About
         </NavLink>
-        <button
+        {/* <button
           style={{
             color: 'white',
             border: '1px solid white',
@@ -47,7 +47,7 @@ function DropDown(props) {
           }}
         >
           Login
-        </button>
+        </button> */}
         <button
           style={{
             color: 'white',

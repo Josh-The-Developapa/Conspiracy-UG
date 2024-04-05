@@ -118,10 +118,11 @@
 .icons-container {
   /* flex: 1; */
   display: flex;
+  width:200px;
   justify-content: center;
   align-items: center;
   margin-left: 20px; /* Add margin to the left of the icons */
-  margin-right: 20px; /* Add margin to the left of the icons */
+  margin-right: 10px; /*Add margin to the left of the icons*/
 }
 
 .icon {
@@ -265,4 +266,34 @@
 
 .search-item:last-child {
   border-bottom: none; /* Remove border from last item */
+}
+
+.Cart-Icon-Text {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.Cart-Icon-Text:hover {
+  color: white;
+}
+
+.Cart-Icon-Text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0; /* Start the underline from the left */
+  width: 0; /* Initially set the width to 0 */
+  height: 2px;
+  background-color: white;
+  visibility: hidden;
+  transition: width 0.3s ease; /* Only transition the width */
+}
+
+.Cart-Icon-Text:hover::after {
+  visibility: visible;
+  width: 100%; /* Expand the underline to cover the entire width on hover */
 }

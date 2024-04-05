@@ -162,13 +162,23 @@ function Header() {
             }}
             title="Shopping Cart"
           />
+
           <div className="hover-ring"></div>
         </div>
-        <div className="icon-container">
+        <p
+          style={{ marginLeft: '10px' }}
+          className="Cart-Icon-Text"
+          onClick={() => {
+            ctx.setModalVal(true);
+          }}
+        >
+          My Cart
+        </p>
+        {/* <div className="icon-container">
           <FaUser className="icon" />
           <div className="hover-ring"></div>
-        </div>
-        <button
+        </div> */}
+        {/* <button
           style={{
             color: 'white',
             border: '1px solid white',
@@ -176,7 +186,7 @@ function Header() {
           }}
         >
           Login
-        </button>
+        </button> */}
       </div>
     </div>
   );
