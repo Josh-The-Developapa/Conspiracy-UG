@@ -9,6 +9,7 @@ import {
 import Home from '../src/pages/Home/Home.jsx';
 import About from './pages/About/About';
 import ContextProvider from './Context/ContextProvider.jsx';
+import Orders from './pages/Orders/Orders.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
   {
     path: 'about',
     element: <About />,
+  },
+
+  {
+    path: 'orders/3jqLJb4Z',
+    element: <Orders />,
   },
 ]);
 

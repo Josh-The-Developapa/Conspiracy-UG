@@ -3,6 +3,7 @@ import Context from '../../Context/Context.jsx';
 import { IoMdTrash } from 'react-icons/io';
 import { FiCheckCircle } from 'react-icons/fi';
 import { FaSpinner } from 'react-icons/fa';
+import { ImSpinner9 } from 'react-icons/im';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { IoIosAddCircle } from 'react-icons/io';
 import { IoMdArrowDropupCircle } from 'react-icons/io';
@@ -18,12 +19,14 @@ function Cart() {
   const [error, setError] = useState('');
   const [checkoutComplete, setCheckoutComplete] = useState(false);
   const [addressExpanded, setAddressExpanded] = useState(false); // State to track address section expansion
+  const [date, setDate] = useState('');
   const [address, setAddress] = useState({
     fullName: '',
     cityTown: '', // Removed stateProvince
     street: '',
     country: 'Uganda',
     phoneNumber: '',
+    date: date,
   });
 
   useEffect(() => {
@@ -40,11 +43,14 @@ function Cart() {
 
   const handleCouponVerification = async () => {
     const couponData = await fetchCouponData();
+    console.log(couponData);
+
     if (coupon.trim() == '') {
       setDiscount(0);
       setError('');
       return;
     }
+
     for (let i in couponData) {
       if (coupon.trim() == couponData[i].couponName) {
         setError(`Valid Coupon. ${couponData[i].discount}% discount applied`);
@@ -97,6 +103,21 @@ function Cart() {
       setLoading(false); // Reset loading state
     } else {
       setError('');
+      // Get the current time in milliseconds
+      const currentTimeMillis = Date.now();
+
+      // Define the time zone offset for EAT in milliseconds
+      const eatOffsetMillis = 3 * 60 * 60 * 1000; // 3 hours * 60 minutes * 60 seconds * 1000 milliseconds
+
+      // Calculate the time in EAT by adding the offset to the current time
+      const eatTimeMillis = currentTimeMillis + eatOffsetMillis;
+
+      // Create a new Date object using the EAT time
+      const eatTime = new Date(eatTimeMillis);
+
+      // Format the EAT time as a string
+      const eatTimeString = eatTime.toUTCString();
+
       const checkoutData = {
         cartItems: cartItems,
         address: address,
@@ -104,6 +125,8 @@ function Cart() {
         totalCost:
           computeCost(cartItems).totalCost * (1 - Number(discount) / 100),
         coupon: coupon,
+        date: eatTimeString,
+        status: 'pending',
       };
 
       // Send data to Firebase
@@ -322,7 +345,10 @@ function Cart() {
             {!checkoutComplete ? (
               <button className="checkout-btn" onClick={handleCheckout}>
                 {loading ? (
-                  <AiOutlineLoading3Quarters className="loading-icon" />
+                  <ImSpinner9
+                    className="loading-icon"
+                    style={{ color: '#ffffff', height: '30px', width: '30px' }}
+                  />
                 ) : (
                   'Confirm Order'
                 )}
