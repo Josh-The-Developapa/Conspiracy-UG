@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: center;
   margin-left: 10px;
-  /* background-color: green; */
+ 
 }
 
 
@@ -127,8 +127,8 @@
 }
 
 .icon {
-  height: 25px;
-  width: 25px;
+  height: 35px;
+  width: 35px;
   margin-left: 15px;
   cursor: pointer;
 }
@@ -282,6 +282,14 @@
 }
 }
 
+
+@media screen and (min-width:862px){
+    .Menu-icon{
+    display:none;
+}
+    
+}
+
 /* @media screen and (max-width:750px){
     .icons-container{
         display:none
@@ -300,12 +308,5 @@
   .central-header-div{
     display:none;
   }
-    
-}
-
-@media screen and (min-width:906px){
-    .Menu-icon{
-    display:none;
-}
     
 }

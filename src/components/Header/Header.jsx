@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
-import Logo from '../../assets/Logo.png';
+import Logo from '../../assets/Logo.svg';
 import Context from '../../Context/Context';
 import DropDown from '../Drop-Down/DropDown';
 import { FiMenu } from 'react-icons/fi';
@@ -99,7 +99,15 @@ function Header() {
       </div>
       <div className="logo-container">
         <Link to="/" className="logo">
-          <img src={Logo} style={{ height: '60px', width: '140px' }} />
+          <img
+            src={Logo}
+            style={{
+              height: '78px',
+              width: '200px',
+              backgroundColor: 'white',
+              objectFit: 'cover',
+            }}
+          />
         </Link>
       </div>
       <div className="central-header-div">
@@ -168,15 +176,6 @@ function Header() {
 
           <div className="hover-ring"></div>
         </div>
-        <p
-          style={{ marginLeft: '8px' }}
-          className="Cart-Icon-Text"
-          onClick={() => {
-            ctx.setModalVal(true);
-          }}
-        >
-          Cart
-        </p>
         {/* <div className="icon-container">
           <FaUser className="icon" />
           <div className="hover-ring"></div>
