@@ -10,6 +10,7 @@ import Home from '../src/pages/Home/Home.jsx';
 import About from './pages/About/About';
 import ContextProvider from './Context/ContextProvider.jsx';
 import Orders from './pages/Orders/Orders.jsx';
+import NotFound from './pages/NotFound/NotFound.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,8 +24,12 @@ const router = createBrowserRouter([
   },
 
   {
-    path: 'orders/3jqLJb4Z',
+    path: 'orders/:passcode',
     element: <Orders />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ]);
 
