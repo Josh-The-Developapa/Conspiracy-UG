@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
-import Logo from '../../assets/Logo.svg';
+import Logo from '../../assets/Logo.png';
 import Context from '../../Context/Context';
 import DropDown from '../Drop-Down/DropDown';
 import { FiMenu } from 'react-icons/fi';
@@ -102,10 +102,8 @@ function Header() {
           <img
             src={Logo}
             style={{
-              height: '78px',
-              width: '200px',
-              backgroundColor: 'white',
-              objectFit: 'cover',
+              height: '60px',
+              width: '140px',
             }}
           />
         </Link>
