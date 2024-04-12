@@ -142,7 +142,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={35000}
+          price={37000}
         />
         <Card
           title="Viper-T"
@@ -150,7 +150,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={35000}
+          price={37000}
         />
         <Card
           title="Enigma"
@@ -158,7 +158,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={35000}
+          price={37000}
         />
         <Card
           title="T-Shirt 4"
@@ -166,7 +166,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={35000}
+          price={37000}
         />
         <Card
           title="T-Shirt 5"
@@ -174,7 +174,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={35000}
+          price={37000}
         />
         <Card
           title="T-Shirt 6"
@@ -182,7 +182,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={35000}
+          price={37000}
         />
         <Card
           title="T-Shirt 7"
@@ -190,7 +190,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={35000}
+          price={37000}
         />
         <Card
           title="T-Shirt 8"
@@ -198,7 +198,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={35000}
+          price={37000}
         />
         <Card
           title="T-Shirt 9"
@@ -206,7 +206,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={35000}
+          price={37000}
         />
       </div>
       {/* <button style={{ backgroundColor: 'green', borderRadius: '25px' }}> */}

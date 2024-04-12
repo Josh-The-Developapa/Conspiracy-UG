@@ -11,6 +11,7 @@ import About from './pages/About/About';
 import ContextProvider from './Context/ContextProvider.jsx';
 import Orders from './pages/Orders/Orders.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
+import Coupons from './pages/Coupons/Coupons.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '*',
     element: <NotFound />,
+  },
+  {
+    path: 'coupons/:passcode',
+    element: <Coupons />,
   },
 ]);
 

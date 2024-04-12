@@ -12,7 +12,6 @@ function Orders() {
   const [loading, setLoading] = useState(false);
   const [accessGranted, setAccessGranted] = useState(false);
   const { passcode } = useParams();
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (passcode == '3jqLJb4Z') setAccessGranted(true);

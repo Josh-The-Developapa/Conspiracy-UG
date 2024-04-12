@@ -20,12 +20,12 @@
   /* margin-top: 70px; */
   object-fit: cover;
   /* The image used */
-  background-image: url(../../assets/Group-pic.png);
+  background-image: url(../../assets/Models-pic.png);
   /* Set a specific height */
   min-height: 90vh; 
   /* Create the parallax scrolling effect */
   background-attachment:fixed; 
-  background-position: center; 
+  background-position: top center; 
   background-repeat: no-repeat;
   background-size:cover;
   display:flex;
