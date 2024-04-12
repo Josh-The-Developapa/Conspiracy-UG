@@ -88,12 +88,15 @@ function Header() {
     <div className="header">
       {ctx.isDrop ? <DropDown /> : ''}
       {ctx.modal ? <Cart /> : ''}
-      <FiMenu
-        className="Menu-icon"
-        onClick={() => {
-          ctx.setIsDropVal(true);
-        }}
-      />
+      <div style={{ display: 'flex' }}>
+        {' '}
+        <FiMenu
+          className="Menu-icon"
+          onClick={() => {
+            ctx.setIsDropVal(true);
+          }}
+        />
+      </div>
       <div className="logo-container">
         <Link to="/" className="logo">
           <img src={Logo} style={{ height: '60px', width: '140px' }} />
@@ -166,13 +169,13 @@ function Header() {
           <div className="hover-ring"></div>
         </div>
         <p
-          style={{ marginLeft: '10px' }}
+          style={{ marginLeft: '8px' }}
           className="Cart-Icon-Text"
           onClick={() => {
             ctx.setModalVal(true);
           }}
         >
-          My Cart
+          Cart
         </p>
         {/* <div className="icon-container">
           <FaUser className="icon" />
