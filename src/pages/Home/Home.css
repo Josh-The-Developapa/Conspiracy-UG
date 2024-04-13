@@ -21,6 +21,8 @@
   object-fit: cover;
   /* The image used */
   background-image: url(../../assets/Models-pic.png);
+  will-change: transform;
+  /* transform: translateZ(0); */
   /* Set a specific height */
   min-height: 90vh; 
   /* Create the parallax scrolling effect */
