@@ -128,9 +128,8 @@ function Home() {
       }}
     >
       <Header />
-      <div className="models-pic">
-        <ScrollDownButton />
-      </div>
+      <div className="models-pic" />
+      <ScrollDownButton />
 
       {/* <img src={Models} alt="Models-Pic" className="models-pic" /> */}
       <div
