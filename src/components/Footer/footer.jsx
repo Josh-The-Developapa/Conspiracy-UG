@@ -50,7 +50,7 @@ function Footer() {
           }}
           className="footer-social-div"
         >
-          <Link
+          {/* <Link
             to="https://youtube.com/conspiracy"
             target="_blank"
             className="social-link"
@@ -64,7 +64,7 @@ function Footer() {
           >
             <PiYoutubeLogoLight style={{ height: '40px', width: '40px' }} />
             <i className="fab fa-youtube"></i> YouTube
-          </Link>
+          </Link> */}
         </div>
         <div
           style={{

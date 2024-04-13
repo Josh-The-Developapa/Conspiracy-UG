@@ -3,9 +3,11 @@ import './DropDown.css';
 import { NavLink } from 'react-router-dom';
 import Context from '../../Context/Context.jsx';
 import Logo from '../../assets/Logo.png';
+import { FaShoppingBag, FaUser } from 'react-icons/fa';
 
 function DropDown(props) {
   const ctx = useContext(Context);
+  const year = new Date(Date.now()).getFullYear();
 
   return (
     <div>
@@ -16,12 +18,20 @@ function DropDown(props) {
         }}
       ></div>
       <div className="dropdown">
-        <h2 style={{ marginLeft: '10px', marginRight: '10px' }}>
+        <h2
+          style={{ marginLeft: '10px', fontSize: '26px' }}
+          className="footer-heading"
+        >
           Conspiracy UG
         </h2>
+        <p
+          style={{ maxWidth: '150px', textAlign: 'center', marginTop: '-10px' }}
+        >
+          Uncover the truth wear Conspiracy
+        </p>
         <NavLink
           to="/"
-          style={{ marginTop: '15px' }}
+          style={{ marginTop: '40px' }}
           className="NavLinkDropDown"
           onClick={() => {
             ctx.setIsDropVal(false);
@@ -53,15 +63,16 @@ function DropDown(props) {
             color: 'white',
             border: '1px solid white',
             marginTop: '20px',
+            textAlign: 'center',
           }}
           onClick={() => {
             ctx.setIsDropVal(false);
             ctx.setModalVal(true);
           }}
         >
-          My Cart
+          Cart
         </button>
-        <h4 style={{ marginTop: '300px' }}>
+        <h4 style={{ position: 'absolute', bottom: 0 }}>
           &copy; Conspiracy UG. <br />
           All rights reserved
         </h4>
