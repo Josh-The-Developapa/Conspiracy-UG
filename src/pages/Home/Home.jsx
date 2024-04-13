@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
@@ -10,7 +10,6 @@ import ModelsCard6 from '../../assets/card-image6.png';
 import ModelsCard2 from '../../assets/card-image3.png';
 import ModelsCard7 from '../../assets/Models-pic.png';
 import Footer from '../../components/Footer/footer';
-// import Models from '../../assets/Models-pic.png'
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
 function Home() {

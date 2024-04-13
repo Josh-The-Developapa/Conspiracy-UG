@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import './DropDown.css';
 import { NavLink } from 'react-router-dom';
 import Context from '../../Context/Context.jsx';
-import Logo from '../../assets/Logo.png';
-import { FaShoppingBag, FaUser } from 'react-icons/fa';
 
 function DropDown(props) {
   const ctx = useContext(Context);

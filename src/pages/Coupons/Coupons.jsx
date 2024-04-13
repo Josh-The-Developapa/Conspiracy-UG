@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './Coupons.css'; // Import CSS file for additional styling
+import './Coupons.css';
 import Header from '../../components/Header/Header.jsx';
 import { ImSpinner9 } from 'react-icons/im';
-import ModelsPic from '../../assets/card-image3.png';
 import Footer from '../../components/Footer/footer.jsx';
 import { useParams } from 'react-router-dom';
 

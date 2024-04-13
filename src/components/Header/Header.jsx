@@ -5,7 +5,7 @@ import Logo from '../../assets/Logo.png';
 import Context from '../../Context/Context';
 import DropDown from '../Drop-Down/DropDown';
 import { FiMenu } from 'react-icons/fi';
-import { FaShoppingBag, FaUser } from 'react-icons/fa';
+import { FaShoppingBag } from 'react-icons/fa';
 import { CiSearch } from 'react-icons/ci';
 import ModelsCard5 from '../../assets/card-image2.png';
 import ModelsCard1 from '../../assets/card-image7.png';
@@ -13,7 +13,6 @@ import ModelsCard4 from '../../assets/card-image4.png';
 import ModelsCard3 from '../../assets/riya-giveaway.png';
 import ModelsCard6 from '../../assets/card-image6.png';
 import ModelsCard2 from '../../assets/card-image3.png';
-import ModelsCard7 from '../../assets/Models-pic.png';
 
 import Cart from '../Cart/Cart.jsx';
 

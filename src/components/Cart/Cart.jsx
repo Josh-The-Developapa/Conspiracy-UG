@@ -2,9 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Context from '../../Context/Context.jsx';
 import { IoMdTrash } from 'react-icons/io';
 import { FiCheckCircle } from 'react-icons/fi';
-import { FaSpinner } from 'react-icons/fa';
 import { ImSpinner9 } from 'react-icons/im';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { IoIosAddCircle } from 'react-icons/io';
 import { IoMdArrowDropupCircle } from 'react-icons/io';
 
