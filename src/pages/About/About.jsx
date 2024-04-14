@@ -23,7 +23,7 @@ const About = () => {
           alignItems: 'center',
           marginLeft: '10px',
           marginRight: '10px',
-          marginTop: '60px',
+          marginTop: '80px',
         }}
       >
         <h2 style={{ marginLeft: '15px', marginRight: '15px' }}>
