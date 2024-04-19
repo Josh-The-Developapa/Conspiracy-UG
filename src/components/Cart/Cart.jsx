@@ -5,6 +5,7 @@ import { FiCheckCircle } from 'react-icons/fi';
 import { ImSpinner9 } from 'react-icons/im';
 import { IoIosAddCircle } from 'react-icons/io';
 import { IoMdArrowDropupCircle } from 'react-icons/io';
+import { IoClose } from 'react-icons/io5';
 
 import './Cart.css';
 
@@ -187,9 +188,10 @@ function Cart() {
       <div className="modal">
         <div className="modal-header">
           <h3 className="modal-title">Your Cart</h3>
-          <button className="close-btn" onClick={() => ctx.setModalVal(false)}>
-            &times;
-          </button>
+          <IoClose
+            className="close-btn"
+            onClick={() => ctx.setModalVal(false)}
+          />
         </div>
         <div className="modal-content">
           {cartItems.length > 0 ? (
@@ -206,6 +208,7 @@ function Cart() {
                     {item.price.toLocaleString('en-US')} UGX
                   </p>
                   <input
+                    style={{ width: '88px' }}
                     type="number"
                     min="1"
                     step="1"

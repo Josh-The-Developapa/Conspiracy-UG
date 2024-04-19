@@ -17,6 +17,7 @@ import ModelsCard2 from '/src/assets/card-image3.png';
 import Cart from '../Cart/Cart.jsx';
 
 function Header() {
+  const cartItems = JSON.parse(localStorage.getItem('CartItems'));
   const ctx = useContext(Context);
   const [searchTerm, setSearchTerm] = useState('');
   const [products, setProducts] = useState([
@@ -82,6 +83,15 @@ function Header() {
     );
     setFilteredProducts(filteredResults);
   }, [searchTerm, products]);
+  const computeCost = (array) => {
+    let totalQuantity = 0;
+    let totalCost = 0;
+    array.forEach((item) => {
+      totalQuantity += Number(item.quantity);
+      totalCost += item.price * item.quantity;
+    });
+    return { totalQuantity, totalCost };
+  };
 
   return (
     <div className="header">
@@ -165,13 +175,22 @@ function Header() {
       <div className="icons-container">
         <div className="icon-container" style={{ marginRight: '5px' }}>
           <FaShoppingBag
-            className={ctx.animateCart ? 'cart-icon' : 'icon'}
+            className="icon"
             onClick={() => {
               ctx.setModalVal(true);
             }}
             title="Shopping Cart"
           />
-
+          <div
+            className={ctx.animateCart ? 'notification-active' : 'notification'}
+            style={{
+              display: cartItems.length == 0 ? 'none' : 'flex',
+            }}
+          >
+            {cartItems
+              ? computeCost(cartItems).totalQuantity.toLocaleString('en-US')
+              : 0}
+          </div>
           <div className="hover-ring"></div>
         </div>
         {/* <div className="icon-container">

@@ -173,9 +173,9 @@
   display: inline-block;
 }
 
-.icon {
+/* .icon {
   font-size: 24px; /* Adjust the size as needed */
-}
+/* } */ 
 
 .hover-ring {
   position: absolute;
@@ -291,12 +291,42 @@
   width: 35px;
   margin-left: 15px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  
+}
+.notification {
+  position: absolute;
+  top: -8px; /* Adjust the top position as needed */
+  right: -8px; /* Adjust the right position as needed */
+  background-color: red; /* Change the background color of the notification */
+  color: white; /* Change the text color of the notification */
+  width: 20px; /* Set the width of the notification */
+  height: 20px; /* Set the height of the notification */
+  border-radius: 50%; /* Make the notification circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold */
+  z-index: 11;
+}
 
-  /* Apply animation only when the animation state is active */
-  
-    animation: enlargeAndShrink 0.5s ease-in-out;
-  
+.notification-active{
+   position: absolute;
+  top: -8px; /* Adjust the top position as needed */
+  right: -8px; /* Adjust the right position as needed */
+  background-color: red; /* Change the background color of the notification */
+  color: white; /* Change the text color of the notification */
+  width: 20px; /* Set the width of the notification */
+  height: 20px; /* Set the height of the notification */
+  border-radius: 50%; /* Make the notification circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold */
+  z-index: 11;
+  transition: transform 0.3s ease-in-out;
+  animation: enlargeAndShrink 0.5s ease-in-out;
 }
 
 
