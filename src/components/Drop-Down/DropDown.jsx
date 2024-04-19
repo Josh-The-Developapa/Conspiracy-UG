@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import './DropDown.css';
 import { NavLink } from 'react-router-dom';
 import Context from '../../Context/Context.jsx';
+import { FaShoppingBag } from 'react-icons/fa';
+import { IoIosContact } from 'react-icons/io';
 
 function DropDown(props) {
   const ctx = useContext(Context);
@@ -62,13 +64,34 @@ function DropDown(props) {
             border: '1px solid white',
             marginTop: '20px',
             textAlign: 'center',
+            width: '129px',
           }}
           onClick={() => {
             ctx.setIsDropVal(false);
             ctx.setModalVal(true);
           }}
         >
-          Cart
+          <FaShoppingBag /> Cart
+        </button>
+        <button
+          style={{
+            color: 'white',
+            border: '1px solid white',
+            marginTop: '20px',
+            textAlign: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+          onClick={() => {
+            ctx.setIsDropVal(false);
+            ctx.setContactCard(true);
+          }}
+        >
+          <IoIosContact
+            style={{ height: '25px', width: '25px', marginRight: '5px' }}
+          />{' '}
+          Contact Us
         </button>
         <h4 style={{ position: 'absolute', bottom: 0 }}>
           &copy; Conspiracy UG. <br />

@@ -15,6 +15,7 @@ import ModelsCard6 from '/src/assets/card-image6.png';
 import ModelsCard2 from '/src/assets/card-image3.png';
 
 import Cart from '../Cart/Cart.jsx';
+import Modal from '../Modal/Modal.jsx';
 
 function Header() {
   const cartItems = JSON.parse(localStorage.getItem('CartItems'));
@@ -97,6 +98,7 @@ function Header() {
     <div className="header">
       {ctx.isDrop ? <DropDown /> : ''}
       {ctx.modal ? <Cart /> : ''}
+      {ctx.contactCard ? <Modal /> : ''}
       <div style={{ display: 'flex' }}>
         {' '}
         <FiMenu
@@ -173,6 +175,14 @@ function Header() {
         </div>
       </div>
       <div className="icons-container">
+        <button
+          className="contact-btn"
+          onClick={() => {
+            ctx.setContactCard(true);
+          }}
+        >
+          Contact Us
+        </button>
         <div className="icon-container" style={{ marginRight: '5px' }}>
           <FaShoppingBag
             className="icon"

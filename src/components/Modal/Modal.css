@@ -1,0 +1,45 @@
+.contact-link{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.contact-item1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  color:#000000;
+}
+
+.contact-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  color:#000000;
+}
+
+.icon {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
+
+.parag1{
+    color:#000000;
+}
+.parag2{
+    color:#000000;
+}
+
+.contact-item1, .parag1:hover{
+     color: #cd23d5
+}
+
+.contact-item2, .parag2:hover{
+    color: #006e9a
+}
+

@@ -129,7 +129,7 @@
 .icon {
   height: 35px;
   width: 35px;
-  margin-left: 15px;
+  margin-left: 20px;
   cursor: pointer;
 }
 
@@ -160,7 +160,8 @@
 }
 
 .central-header-div{
-    width: 70%;
+  flex:2;
+    /* width: 70%; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -180,9 +181,9 @@
 .hover-ring {
   position: absolute;
   top: -8px;
-  left: 5px;
-  width: 100%;
-  height: calc(100% + 10px);
+  left: 8px;
+  width: 55px;
+  height: 50px;
   border: 2px solid transparent;
   border-radius: 50%;
   transition: border-color 0.3s ease;
@@ -295,8 +296,8 @@
 }
 .notification {
   position: absolute;
-  top: -8px; /* Adjust the top position as needed */
-  right: -8px; /* Adjust the right position as needed */
+  top: -2px; /* Adjust the top position as needed */
+  right: 0px; /* Adjust the right position as needed */
   background-color: red; /* Change the background color of the notification */
   color: white; /* Change the text color of the notification */
   width: 20px; /* Set the width of the notification */
@@ -311,9 +312,9 @@
 }
 
 .notification-active{
-   position: absolute;
-  top: -8px; /* Adjust the top position as needed */
-  right: -8px; /* Adjust the right position as needed */
+  position: absolute;
+  top: -2px; /* Adjust the top position as needed */
+  right: 0px; /* Adjust the right position as needed */
   background-color: red; /* Change the background color of the notification */
   color: white; /* Change the text color of the notification */
   width: 20px; /* Set the width of the notification */
@@ -329,6 +330,14 @@
   animation: enlargeAndShrink 0.5s ease-in-out;
 }
 
+.contact-btn{
+  color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
 
 
 @media screen and (max-width:861px){
@@ -367,4 +376,10 @@
     display:none;
   }
     
+}
+
+@media screen and (max-width:650px){
+.contact-btn{
+  display:none;
+}
 }
