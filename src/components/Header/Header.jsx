@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
-import Logo from '/src/assets/Logo.png';
+import Logo from '/src/assets/Logo.svg';
 import Context from '../../Context/Context';
 import DropDown from '../Drop-Down/DropDown';
 import { FiMenu } from 'react-icons/fi';
@@ -103,6 +103,7 @@ function Header() {
             style={{
               height: '60px',
               width: '140px',
+              // backgroundColor: 'green',
             }}
           />
         </Link>

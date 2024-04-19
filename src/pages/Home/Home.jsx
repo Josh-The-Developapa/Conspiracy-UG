@@ -14,17 +14,20 @@ import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton
 
 function Home() {
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const modelsPic = document.querySelector('.models-pic');
-      modelsPic.style.backgroundPositionY = `${scrollTop * 0.5}px`; // Adjust the parallax effect speed as needed
-    };
+    // Check if the screen width is greater than 12 inches (1200 pixels)
+    if (window.innerWidth > 900) {
+      const handleScroll = () => {
+        const scrollTop = window.scrollY;
+        const modelsPic = document.querySelector('.models-pic');
+        modelsPic.style.backgroundPositionY = `${scrollTop * 0.5}px`; // Adjust the parallax effect speed as needed
+      };
 
-    window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, []);
   async function sendProductDataToFirebase(productName, description) {
     // Firebase URL
@@ -127,10 +130,8 @@ function Home() {
         left: 0,
       }}
     >
-      <Header />
-      <div className="models-pic" />
+      <Header /> <div className="models-pic" />
       <ScrollDownButton />
-
       {/* <img src={Models} alt="Models-Pic" className="models-pic" /> */}
       <div
         style={{
