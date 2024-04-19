@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Card.css';
+import Context from '../../Context/Context';
 
 function Card(props) {
+  const ctx = useContext(Context);
   const [hovered, setHovered] = useState(false);
   const [buttonText, setButtonText] = useState('Add to cart'); // State for button text
 
@@ -13,6 +15,10 @@ function Card(props) {
   };
 
   const handleAddToCart = () => {
+    ctx.setAnimateCart(true);
+    setTimeout(() => {
+      ctx.setAnimateCart(false);
+    }, 1000);
     // Parse existing cart items from local storage
     const existingCartItems =
       JSON.parse(localStorage.getItem('CartItems')) || [];

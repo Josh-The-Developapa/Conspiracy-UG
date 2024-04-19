@@ -4,6 +4,7 @@ import { useState } from 'react';
 function ContextProvider(props) {
   const [isDrop, setIsDrop] = useState(false);
   const [modal, setModal] = useState(false);
+  const [animateCart, setAnimateCart] = useState(false);
 
   function setIsDropVal(val) {
     setIsDrop(val);
@@ -13,6 +14,10 @@ function ContextProvider(props) {
     setModal(val);
   }
 
+  const toggleCartIconAnimate = () => {
+    setAnimateCart((prev) => !prev);
+  };
+
   return (
     <Context.Provider
       value={{
@@ -20,6 +25,8 @@ function ContextProvider(props) {
         modal,
         setIsDropVal,
         setModalVal,
+        animateCart,
+        setAnimateCart: toggleCartIconAnimate,
       }}
     >
       {props.children}

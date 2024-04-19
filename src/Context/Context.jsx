@@ -5,6 +5,8 @@ const Context = createContext({
   modal: false,
   setModalVal: () => {},
   setIsDropVal: () => {},
+  animateCart: false,
+  setAnimateCart: () => {},
 });
 
 export default Context;

@@ -165,7 +165,7 @@ function Header() {
       <div className="icons-container">
         <div className="icon-container" style={{ marginRight: '5px' }}>
           <FaShoppingBag
-            className="icon"
+            className={ctx.animateCart ? 'cart-icon' : 'icon'}
             onClick={() => {
               ctx.setModalVal(true);
             }}
