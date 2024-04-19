@@ -101,8 +101,8 @@ function Header() {
           <img
             src={Logo}
             style={{
-              height: '60px',
-              width: '140px',
+              height: '110px',
+              // width: '140px',
               // backgroundColor: 'green',
             }}
           />
