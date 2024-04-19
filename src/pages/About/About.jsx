@@ -1,13 +1,13 @@
 import React from 'react';
 import './About.css';
 import Header from '../../components/Header/Header';
-import Image1 from '../../assets/card-image5.png';
-import Image2 from '../../assets/card-image4.png';
-import Image3 from '../../assets/card-image3.png';
-import Image4 from '../../assets/riya-giveaway.png';
-import Image8 from '../../assets/card-image6.png';
-import Image6 from '../../assets/card-image7.png';
-import Image11 from '../../assets/Models-pic.png';
+import Image1 from '/src/assets/card-image5.png';
+import Image2 from '/src/assets/card-image4.png';
+import Image3 from '/src/assets/card-image3.png';
+import Image4 from '/src/assets/riya-giveaway.png';
+import Image8 from '/src/assets/card-image6.png';
+import Image6 from '/src/assets/card-image7.png';
+import Image11 from '/src/assets/Models-pic.png';
 import Footer from '../../components/Footer/footer';
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 

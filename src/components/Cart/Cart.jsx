@@ -196,7 +196,7 @@ function Cart() {
             cartItems.map((item, index) => (
               <div className="item-container" key={index}>
                 <img
-                  src={`../../assets/${item.image}`}
+                  src={`/src/assets/${item.image}`}
                   alt={item.title}
                   className="item-image"
                 />

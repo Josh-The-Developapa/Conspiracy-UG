@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
-import Logo from '../../assets/Logo.png';
+import Logo from '/src/assets/Logo.png';
 import Context from '../../Context/Context';
 import DropDown from '../Drop-Down/DropDown';
 import { FiMenu } from 'react-icons/fi';
 import { FaShoppingBag } from 'react-icons/fa';
 import { CiSearch } from 'react-icons/ci';
-import ModelsCard5 from '../../assets/card-image2.png';
-import ModelsCard1 from '../../assets/card-image7.png';
-import ModelsCard4 from '../../assets/card-image4.png';
-import ModelsCard3 from '../../assets/riya-giveaway.png';
-import ModelsCard6 from '../../assets/card-image6.png';
-import ModelsCard2 from '../../assets/card-image3.png';
+import ModelsCard5 from '/src/assets/card-image2.png';
+import ModelsCard1 from '/src/assets/card-image7.png';
+import ModelsCard4 from '/src/assets/card-image4.png';
+import ModelsCard3 from '/src/assets/riya-giveaway.png';
+import ModelsCard6 from '/src/assets/card-image6.png';
+import ModelsCard2 from '/src/assets/card-image3.png';
 
 import Cart from '../Cart/Cart.jsx';
 
