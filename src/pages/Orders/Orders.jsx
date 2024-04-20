@@ -154,46 +154,49 @@ function Orders() {
                     </button>
                   )}
                   <p className="order-details">
-                    <p className="order-details">
-                      <span className="order-label">Full Name:</span>{' '}
-                      {order.address.fullName} <br />
-                      {/* <br /> */}
-                      <span className="order-label">Phone Number:</span>{' '}
-                      {order.address.phoneNumber} <br />
-                      {/* <br /> */}
-                      <span className="order-label">City:</span>{' '}
-                      {order.address.cityTown} <br />
-                      {/* <br /> */}
-                      <span className="order-label">Street:</span>{' '}
-                      {order.address.street} <br />
-                      {/* <br /> */}
-                      <span className="order-label">
-                        Total number of shirts:
-                      </span>{' '}
-                      {order.totalShirts} <br />
-                      {/* <br /> */}
-                      <span className="order-label">Date:</span>{' '}
-                      {`${order.date.split()}`} <br />
-                      {/* <br /> */}
-                      <span className="order-label">Coupon:</span>{' '}
-                      {order.coupon.trim() == '' ? 'None' : order.coupon}
-                      <br />
-                      {/* <br /> */}
-                      {/* <span className="order-label">STATUS:</span> <br />
+                    <span className="order-label">Full Name:</span>{' '}
+                    {order.address.fullName} <br />
+                    {/* <br /> */}
+                    <span className="order-label">Phone Number:</span>{' '}
+                    {order.address.phoneNumber} <br />
+                    {/* <br /> */}
+                    <span className="order-label">City:</span>{' '}
+                    {order.address.cityTown} <br />
+                    {/* <br /> */}
+                    <span className="order-label">Street:</span>{' '}
+                    {order.address.street} <br />
+                    {/* <br /> */}
+                    <span className="order-label">
+                      Total number of shirts:
+                    </span>{' '}
+                    {order.totalShirts} <br />
+                    {/* <br /> */}
+                    <span className="order-label">Date:</span>{' '}
+                    {/* {`${order.date}`} <br /> */}
+                    {`${order.date
+                      .split('')
+                      .splice(0, order.date.length - 3)
+                      .join('')}`}{' '}
+                    <br />
+                    {/* <br /> */}
+                    <span className="order-label">Coupon:</span>{' '}
+                    {order.coupon.trim() == '' ? 'None' : order.coupon}
+                    <br />
+                    {/* <br /> */}
+                    {/* <span className="order-label">STATUS:</span> <br />
                     <h2 style={{ margin: 0, marginBottom: '10px' }}>
                       {order.status.toUpperCase()}
                     </h2> */}
-                      {/* <br /> */}
-                      <span className="order-label">TOTAL COST:</span> <br />
-                      {/* <br /> */}
-                      <h2
-                        style={{ margin: 0 }}
-                      >{`${order.totalCost.toLocaleString(
-                        'en-US'
-                      )} UGX`}</h2>{' '}
-                      {/* <br />
+                    {/* <br /> */}
+                    <span className="order-label">TOTAL COST:</span> <br />
+                    {/* <br /> */}
+                    <h2
+                      style={{ margin: 0 }}
+                    >{`${order.totalCost.toLocaleString(
+                      'en-US'
+                    )} UGX`}</h2>{' '}
+                    {/* <br />
                   <br /> */}
-                    </p>
                   </p>
                   <h3 className="shirts-title">Shirts Ordered:</h3>
                   <div className="shirts-ordered">

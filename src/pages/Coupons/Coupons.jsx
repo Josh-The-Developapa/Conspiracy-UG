@@ -195,7 +195,13 @@ function Coupons() {
                                   alignItems: 'flex-start',
                                 }}
                               >
-                                <span>Date: {order.date}</span>
+                                <span>
+                                  Date:{' '}
+                                  {order.date
+                                    .split('')
+                                    .splice(0, order.date.length - 3)
+                                    .join('')}
+                                </span>
                                 <span>Coupon: {order.coupon}</span>
                                 <span>
                                   Discounted Cost:{' '}
