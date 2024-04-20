@@ -200,7 +200,7 @@ function Orders() {
                     {Object.values(order.cartItems).map((shirt, shirtIndex) => (
                       <div key={shirtIndex} className="shirt-item">
                         <img
-                          src={`/src/assets/${shirt.image}`}
+                          src={`../../assets/${shirt.image}`}
                           // src={ModelsPic}
                           alt={shirt.title}
                           className="shirt-image"
