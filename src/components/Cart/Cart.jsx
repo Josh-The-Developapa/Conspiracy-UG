@@ -40,6 +40,13 @@ function Cart() {
     localStorage.setItem('CartItems', JSON.stringify(updatedCartItems));
   };
 
+  const handleSizeChange = (index, newSize) => {
+    const updatedCartItems = [...cartItems];
+    updatedCartItems[index].size = newSize;
+    setCartItems(updatedCartItems);
+    localStorage.setItem('CartItems', JSON.stringify(updatedCartItems));
+  };
+
   const handleCouponVerification = async () => {
     const couponData = await fetchCouponData();
     console.log(couponData);
@@ -208,7 +215,8 @@ function Cart() {
                     {item.price.toLocaleString('en-US')} UGX
                   </p>
                   <input
-                    style={{ width: '88px' }}
+                    style={{ width: '70px' }}
+                    placeholder="quantity"
                     type="number"
                     min="1"
                     step="1"
@@ -216,6 +224,13 @@ function Cart() {
                     onChange={(e) =>
                       handleQuantityChange(index, e.target.value)
                     }
+                  />
+                  <br />
+                  <input
+                    style={{ width: '70px' }}
+                    placeholder="Shirt size"
+                    value={item.size}
+                    onChange={(e) => handleSizeChange(index, e.target.value)}
                   />
                 </div>
                 <IoMdTrash

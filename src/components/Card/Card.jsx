@@ -12,6 +12,7 @@ function Card(props) {
     price: props.price,
     image: props.image.split('/').pop(),
     quantity: 1,
+    size: '',
   };
 
   const handleAddToCart = () => {

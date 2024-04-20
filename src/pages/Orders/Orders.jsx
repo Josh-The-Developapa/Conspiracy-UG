@@ -220,6 +220,7 @@ function Orders() {
                           <br />
                           Quantity: {shirt.quantity}
                           <br />
+                          Size: {shirt.size}
                         </div>
                       </div>
                     ))}
