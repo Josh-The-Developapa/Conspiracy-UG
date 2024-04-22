@@ -13,6 +13,9 @@ function Orders() {
   const { passcode } = useParams();
 
   useEffect(() => {
+    if (!localStorage.getItem('CartItems')) {
+      localStorage.setItem('CartItems', []);
+    }
     if (passcode == '3jqLJb4Z') setAccessGranted(true);
     setLoading(true);
     fetch('https://conspiracy-67f09-default-rtdb.firebaseio.com/orders.json', {
