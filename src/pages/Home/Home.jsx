@@ -17,6 +17,7 @@ function Home() {
     if (!localStorage.getItem('CartItems')) {
       localStorage.setItem('CartItems', []);
     }
+
     // Check if the screen width is greater than 12 inches (1200 pixels)
     if (window.innerWidth > 900) {
       const handleScroll = () => {
