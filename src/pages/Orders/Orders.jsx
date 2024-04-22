@@ -14,7 +14,7 @@ function Orders() {
 
   useEffect(() => {
     if (!localStorage.getItem('CartItems')) {
-      localStorage.setItem('CartItems', []);
+      localStorage.setItem('CartItems', '[]');
     }
     if (passcode == '3jqLJb4Z') setAccessGranted(true);
     setLoading(true);

@@ -18,7 +18,6 @@ import Cart from '../Cart/Cart.jsx';
 import Modal from '../Modal/Modal.jsx';
 
 function Header() {
-  const cartItems = JSON.parse(localStorage.getItem('CartItems'));
   const ctx = useContext(Context);
   const [searchTerm, setSearchTerm] = useState('');
   const [products, setProducts] = useState([
@@ -67,6 +66,16 @@ function Header() {
 
     // Add more product objects here...
   ]);
+  // useEffect(() => {
+  //   if (!localStorage.getItem('CartItems')) {
+  //     localStorage.getItem('CartItems', '[]');
+  //   }
+  // }, []);
+
+  const cartItems = JSON.parse(
+    localStorage.getItem('CartItems') ? localStorage.getItem('CartItems') : '[]'
+  );
+
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   const handleChange = (event) => {
@@ -84,6 +93,7 @@ function Header() {
     );
     setFilteredProducts(filteredResults);
   }, [searchTerm, products]);
+
   const computeCost = (array) => {
     let totalQuantity = 0;
     let totalCost = 0;

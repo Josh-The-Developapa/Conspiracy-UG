@@ -15,7 +15,7 @@ import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton
 function Home() {
   useEffect(() => {
     if (!localStorage.getItem('CartItems')) {
-      localStorage.setItem('CartItems', []);
+      localStorage.setItem('CartItems', '[]');
     }
 
     // Check if the screen width is greater than 12 inches (1200 pixels)
