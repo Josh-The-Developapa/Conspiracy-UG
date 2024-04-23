@@ -156,7 +156,8 @@ function Home() {
       <div className="cardDiv">
         <Card
           title="The Fall Guy"
-          image={ModelsCard8}
+          // image={ModelsCard8}
+          image={ModelsCard1}
           para={
             "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace."
           }
@@ -164,7 +165,8 @@ function Home() {
         />
         <Card
           title="Reckless"
-          image={ModelsCard9}
+          // image={ModelsCard9}
+          image={ModelsCard3}
           para={
             'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.'
           }
