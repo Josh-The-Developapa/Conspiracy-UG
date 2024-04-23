@@ -7,6 +7,8 @@ import ModelsCard1 from '/src/assets/card-image7.png';
 import ModelsCard4 from '/src/assets/card-image4.png';
 import ModelsCard3 from '/src/assets/riya-giveaway.png';
 import ModelsCard6 from '/src/assets/card-image6.png';
+import ModelsCard8 from '/src/assets/fall-guy.jpg';
+import ModelsCard9 from '/src/assets/Reckless.png';
 import ModelsCard2 from '/src/assets/card-image3.png';
 import ModelsCard7 from '/src/assets/Models-pic.png';
 import Footer from '../../components/Footer/footer';
@@ -153,24 +155,24 @@ function Home() {
       </div>
       <div className="cardDiv">
         <Card
-          title="The Seer"
-          image={ModelsCard1}
+          title="The Fall Guy"
+          image={ModelsCard8}
           para={
-            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
+            "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace."
           }
           price={37000}
         />
         <Card
-          title="Viper-T"
-          image={ModelsCard2}
+          title="Reckless"
+          image={ModelsCard9}
           para={
-            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
+            'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.'
           }
           price={37000}
         />
         <Card
           title="Enigma"
-          image={ModelsCard3}
+          image={ModelsCard5}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
@@ -186,7 +188,7 @@ function Home() {
         />
         <Card
           title="T-Shirt 5"
-          image={ModelsCard5}
+          image={ModelsCard2}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
