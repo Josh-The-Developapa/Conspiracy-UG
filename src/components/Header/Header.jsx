@@ -23,9 +23,9 @@ function Header() {
   const [products, setProducts] = useState([
     {
       id: 1,
-      title: 'The Seer',
+      title: 'The Fall Guy',
       image: ModelsCard1,
-      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+      para: "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace.",
       price: 37000,
     },
     {
@@ -37,9 +37,9 @@ function Header() {
     },
     {
       id: 3,
-      title: 'T-Shirt 3',
+      title: 'Reckless',
       image: ModelsCard3,
-      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+      para: 'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.',
       price: 37000,
     },
     {
