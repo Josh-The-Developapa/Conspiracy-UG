@@ -8,9 +8,9 @@ import { FiMenu } from 'react-icons/fi';
 import { FaShoppingBag } from 'react-icons/fa';
 import { CiSearch } from 'react-icons/ci';
 import ModelsCard5 from '/src/assets/card-image2.png';
-import ModelsCard1 from '/src/assets/card-image7.png';
+import ModelsCard1 from '/src/assets/fall-guy.jpg';
 import ModelsCard4 from '/src/assets/card-image4.png';
-import ModelsCard3 from '/src/assets/riya-giveaway.png';
+import ModelsCard3 from '/src/assets/Reckless.png';
 import ModelsCard6 from '/src/assets/card-image6.png';
 import ModelsCard2 from '/src/assets/card-image3.png';
 
@@ -29,17 +29,17 @@ function Header() {
       price: 37000,
     },
     {
-      id: 2,
-      title: 'Viper-T',
-      image: ModelsCard2,
-      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
-      price: 37000,
-    },
-    {
       id: 3,
       title: 'Reckless',
       image: ModelsCard3,
       para: 'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.',
+      price: 37000,
+    },
+    {
+      id: 2,
+      title: 'Viper-T',
+      image: ModelsCard2,
+      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
       price: 37000,
     },
     {
@@ -172,8 +172,8 @@ function Header() {
                   alt={product.title}
                   className="product-image"
                   style={{
-                    height: '50px',
-                    width: '50px',
+                    height: '80px',
+                    width: '80px',
                     borderRadius: '50px',
                     objectFit: 'cover',
                   }}

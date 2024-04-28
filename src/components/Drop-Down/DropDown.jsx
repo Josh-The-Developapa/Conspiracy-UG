@@ -93,8 +93,8 @@ function DropDown(props) {
           />{' '}
           Contact Us
         </button>
-        <h4 style={{ position: 'absolute', bottom: 0 }}>
-          &copy; Conspiracy UG. <br />
+        <h4 style={{ position: 'absolute', bottom: 0, textAlign: 'center' }}>
+          &copy; {year} Conspiracy UG. <br />
           All rights reserved
         </h4>
       </div>

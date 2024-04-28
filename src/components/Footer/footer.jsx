@@ -92,7 +92,7 @@ function Footer() {
         </div>
       </div>
       <h3 style={{ fontSize: '18px' }}>
-        Copyright &copy; {year} Conspiracy UG. All Rights Reserved
+        &copy; {year} Conspiracy UG. All rights reserved
       </h3>
     </footer>
   );
