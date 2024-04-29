@@ -194,10 +194,6 @@
   animation: spin-ring 0.3s forwards linear; /* Start the animation on hover */
 }
 
-.icon-container:focus .hover-ring {
-  animation: spin-ring 0.3s forwards linear; /* Start the animation on hover */
-}
-
 @keyframes spin-ring {
   0% {
     transform: rotate(0deg); /* Start from no rotation */
