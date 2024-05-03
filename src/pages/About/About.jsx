@@ -1,12 +1,14 @@
 import React from 'react';
 import './About.css';
 import Header from '../../components/Header/Header';
-import Image1 from '/src/assets/card-image5.png';
-import Image2 from '/src/assets/card-image4.png';
+import Image1 from '/src/assets/DOTI.jpg';
+import Image2 from '/src/assets/DOTI-front.jpg';
 import Image3 from '/src/assets/card-image3.png';
 import Image4 from '/src/assets/riya-giveaway.png';
 import Image8 from '/src/assets/card-image6.png';
 import Image6 from '/src/assets/card-image7.png';
+import Image9 from '/src/assets/card-image5.png';
+import Image10 from '/src/assets/card-image4.png';
 import Image11 from '/src/assets/Models-pic.png';
 import Footer from '../../components/Footer/footer';
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
@@ -146,7 +148,7 @@ const About = () => {
         </div>
         <div className="image-container1">
           <img
-            src={Image6}
+            src={Image10}
             alt="Clothing"
             className="tilted-image1"
             style={{ zIndex: 6, height: '500px' }}
@@ -161,7 +163,7 @@ const About = () => {
         </div>
         <div className="image-container1">
           <img
-            src={Image6}
+            src={Image9}
             alt="Clothing"
             className="tilted-image1"
             style={{ zIndex: 6, height: '500px' }}

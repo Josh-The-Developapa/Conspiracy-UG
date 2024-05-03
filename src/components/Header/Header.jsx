@@ -7,12 +7,9 @@ import DropDown from '../Drop-Down/DropDown';
 import { FiMenu } from 'react-icons/fi';
 import { FaShoppingBag } from 'react-icons/fa';
 import { CiSearch } from 'react-icons/ci';
-import ModelsCard5 from '/src/assets/card-image2.png';
-import ModelsCard1 from '/src/assets/hope.jpg';
-import ModelsCard4 from '/src/assets/card-image4.png';
-import ModelsCard3 from '/src/assets/Reckless.png';
-import ModelsCard6 from '/src/assets/card-image6.png';
-import ModelsCard2 from '/src/assets/card-image3.png';
+import Hope from '/src/assets/hope.jpg';
+import Reckless from '/src/assets/Reckless.png';
+import Overthinker from '/src/assets/DOTI.jpg';
 
 import Cart from '../Cart/Cart.jsx';
 import Modal from '../Modal/Modal.jsx';
@@ -23,43 +20,22 @@ function Header() {
   const [products, setProducts] = useState([
     {
       id: 1,
-      title: 'The Fall Guy',
-      image: ModelsCard1,
+      title: 'Hope',
+      image: Hope,
       para: "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace.",
       price: 38000,
     },
     {
       id: 3,
       title: 'Reckless',
-      image: ModelsCard3,
+      image: Reckless,
       para: 'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.',
       price: 38000,
     },
     {
       id: 2,
-      title: 'D.O.T.I',
-      image: ModelsCard2,
-      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
-      price: 38000,
-    },
-    {
-      id: 4,
-      title: 'T-Shirt 4',
-      image: ModelsCard4,
-      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
-      price: 38000,
-    },
-    {
-      id: 5,
-      title: 'T-Shirt 5',
-      image: ModelsCard5,
-      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
-      price: 38000,
-    },
-    {
-      id: 6,
-      title: 'T-Shirt 6',
-      image: ModelsCard6,
+      title: 'Overthinker',
+      image: Overthinker,
       para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
       price: 38000,
     },

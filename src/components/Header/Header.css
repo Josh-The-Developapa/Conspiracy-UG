@@ -336,7 +336,7 @@
 }
 
 
-@media screen and (max-width:861px){
+@media screen and (max-width:905px){
      .NavLink{
     display:none;
 }
@@ -345,8 +345,14 @@
 }
 }
 
+@media screen and (max-width:710px) {
+  .contact-btn{
+    display:none;
+  }
+}
 
-@media screen and (min-width:862px){
+
+@media screen and (min-width:906px){
     .Menu-icon{
     display:none;
 }
