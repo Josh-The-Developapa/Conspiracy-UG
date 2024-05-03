@@ -99,7 +99,7 @@ function Header() {
           <img
             src={Logo}
             style={{
-              height: '85px',
+              height: '75px',
               // width: '140px',
               // backgroundColor: 'green',
             }}
