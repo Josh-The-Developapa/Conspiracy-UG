@@ -8,7 +8,7 @@ import { FiMenu } from 'react-icons/fi';
 import { FaShoppingBag } from 'react-icons/fa';
 import { CiSearch } from 'react-icons/ci';
 import ModelsCard5 from '/src/assets/card-image2.png';
-import ModelsCard1 from '/src/assets/fall-guy.jpg';
+import ModelsCard1 from '/src/assets/hope.jpg';
 import ModelsCard4 from '/src/assets/card-image4.png';
 import ModelsCard3 from '/src/assets/Reckless.png';
 import ModelsCard6 from '/src/assets/card-image6.png';

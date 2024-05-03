@@ -8,7 +8,7 @@ import ModelsCard1 from '/src/assets/card-image7.png';
 import ModelsCard4 from '/src/assets/card-image4.png';
 import ModelsCard3 from '/src/assets/riya-giveaway.png';
 import ModelsCard6 from '/src/assets/card-image6.png';
-import Hope from '/src/assets/fall-guy.jpg';
+import Hope from '/src/assets/hope.jpg';
 import Reckless from '/src/assets/Reckless.png';
 import ModelsCard2 from '/src/assets/card-image3.png';
 import ModelsPic from '/src/assets/Models-pic.png';

@@ -205,7 +205,14 @@ function Cart() {
             cartItems.map((item, index) => (
               <div className="item-container" key={index}>
                 <img
-                  src={`../../assets/${item.image}`}
+                  src={
+                    item.title == 'Hope'
+                      ? `../../assets/hope.jpg`
+                      : item.title == 'Reckless'
+                      ? `../../assets/Reckless.png`
+                      : `../../assets/DOTI.jpg`
+                  }
+                  // `../../assets/${item.image}`
                   alt={item.title}
                   className="item-image"
                 />
