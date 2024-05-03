@@ -26,42 +26,42 @@ function Header() {
       title: 'The Fall Guy',
       image: ModelsCard1,
       para: "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace.",
-      price: 37000,
+      price: 38000,
     },
     {
       id: 3,
       title: 'Reckless',
       image: ModelsCard3,
       para: 'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.',
-      price: 37000,
+      price: 38000,
     },
     {
       id: 2,
-      title: 'Viper-T',
+      title: 'D.O.T.I',
       image: ModelsCard2,
       para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
-      price: 37000,
+      price: 38000,
     },
     {
       id: 4,
       title: 'T-Shirt 4',
       image: ModelsCard4,
       para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
-      price: 37000,
+      price: 38000,
     },
     {
       id: 5,
       title: 'T-Shirt 5',
       image: ModelsCard5,
       para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
-      price: 37000,
+      price: 38000,
     },
     {
       id: 6,
       title: 'T-Shirt 6',
       image: ModelsCard6,
       para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
-      price: 37000,
+      price: 38000,
     },
 
     // Add more product objects here...
@@ -123,7 +123,7 @@ function Header() {
           <img
             src={Logo}
             style={{
-              height: '120px',
+              height: '85px',
               // width: '140px',
               // backgroundColor: 'green',
             }}
