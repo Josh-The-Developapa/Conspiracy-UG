@@ -156,7 +156,7 @@ function Home() {
       </div>
       <div className="cardDiv">
         <Card
-          title="Over thinker "
+          title="Over thinker"
           image={DOTI_BACK}
           // hoverPic={DOTI_FRONT}
           para={
@@ -182,7 +182,7 @@ function Home() {
           }
           price={38000}
         />
-        <Card
+        {/* <Card
           title="T-Shirt 4"
           image={ModelsCard4}
           para={
@@ -231,7 +231,7 @@ function Home() {
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
           price={38000}
-        />
+        /> */}
       </div>
       {/* <button style={{ backgroundColor: 'green', borderRadius: '25px' }}> */}
       {/* </button> */}
