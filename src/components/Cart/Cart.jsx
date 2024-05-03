@@ -325,7 +325,7 @@ function Cart() {
               placeholder="Enter Coupon - Optional"
               value={coupon}
               onChange={handleCouponChange}
-              style={{ marginBottom: '-5px', width: '50%' }}
+              style={{ marginBottom: '-5px', width: '60%' }}
             />{' '}
             <button onClick={handleCouponVerification} className="verify-btn">
               Verify

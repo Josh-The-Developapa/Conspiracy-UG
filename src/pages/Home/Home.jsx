@@ -176,56 +176,6 @@ function Home() {
           }
           price={38000}
         />
-        {/* <Card
-          title="T-Shirt 4"
-          image={ModelsCard4}
-          para={
-            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
-          }
-          price={38000}
-        />
-        <Card
-          title="T-Shirt 5"
-          image={ModelsCard2}
-          para={
-            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
-          }
-          price={38000}
-        />
-        <Card
-          title="T-Shirt 6"
-          image={ModelsCard6}
-          para={
-            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
-          }
-          price={38000}
-        />
-        <Card
-          title="T-Shirt 7"
-          // image={ModelsPic}
-          image={ModelsCard1}
-          para={
-            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
-          }
-          price={38000}
-        />
-        <Card
-          title="T-Shirt 8"
-          image={ModelsCard3}
-          // image={ModelsPic}
-          para={
-            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
-          }
-          price={38000}
-        />
-        <Card
-          title="T-Shirt 9"
-          image={ModelsPic}
-          para={
-            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
-          }
-          price={38000}
-        /> */}
       </div>
       {/* <button style={{ backgroundColor: 'green', borderRadius: '25px' }}> */}
       {/* </button> */}

@@ -16,7 +16,7 @@ function ScrollDownButton() {
 
   const scrollToBottom = () => {
     window.scrollTo({
-      top: 705,
+      top: 780,
       behavior: 'smooth',
     });
   };
