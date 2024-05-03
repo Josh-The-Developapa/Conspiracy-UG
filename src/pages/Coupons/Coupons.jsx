@@ -212,7 +212,7 @@ function Coupons() {
                                 <span>
                                   Actual Cost:{' '}
                                   {`${(
-                                    37000 * order.totalShirts
+                                    38000 * order.totalShirts
                                   ).toLocaleString('en-US')} UGX`}
                                 </span>
                                 <span>Total Shirts: {order.totalShirts}</span>

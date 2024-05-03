@@ -66,7 +66,11 @@ function Card(props) {
           </span>
         </div>
       )}
-      <img className="card-img" src={props.image} alt={`${props.image}`} />
+      <img
+        className={hovered ? 'card-img' : 'card-img-back'}
+        src={hovered && props.hoverPic ? props.hoverPic : props.image}
+        alt={props.image}
+      />
       <h2 style={{ color: 'white', marginBottom: '-15px', marginLeft: '20px' }}>
         {props.title}: {`${props.price.toLocaleString('en-US')} UGX`}
       </h2>

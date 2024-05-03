@@ -2,15 +2,16 @@ import React, { useEffect } from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
-import ModelsCard5 from '/src/assets/card-image2.png';
+import DOTI_BACK from '/src/assets/DOTI.jpg';
+import DOTI_FRONT from '/src/assets/DOTI-front.jpg';
 import ModelsCard1 from '/src/assets/card-image7.png';
 import ModelsCard4 from '/src/assets/card-image4.png';
 import ModelsCard3 from '/src/assets/riya-giveaway.png';
 import ModelsCard6 from '/src/assets/card-image6.png';
-import ModelsCard8 from '/src/assets/fall-guy.jpg';
-import ModelsCard9 from '/src/assets/Reckless.png';
+import Hope from '/src/assets/fall-guy.jpg';
+import Reckless from '/src/assets/Reckless.png';
 import ModelsCard2 from '/src/assets/card-image3.png';
-import ModelsCard7 from '/src/assets/Models-pic.png';
+import ModelsPic from '/src/assets/Models-pic.png';
 import Footer from '../../components/Footer/footer';
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
@@ -155,30 +156,31 @@ function Home() {
       </div>
       <div className="cardDiv">
         <Card
-          title="The Fall Guy"
-          // image={ModelsCard8}
-          image={ModelsCard1}
+          title="Over thinker "
+          image={DOTI_BACK}
+          // hoverPic={DOTI_FRONT}
+          para={
+            "Don't Over Think It. Stay stylish, keep your look effortlessly cool and your mind at ease."
+          }
+          price={38000}
+        />
+        <Card
+          title="Hope"
+          image={Hope}
+          // image={ModelsCard1}
           para={
             "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace."
           }
-          price={37000}
+          price={38000}
         />
         <Card
           title="Reckless"
-          // image={ModelsCard9}
-          image={ModelsCard3}
+          image={Reckless}
+          // image={ModelsCard3}
           para={
             'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.'
           }
-          price={37000}
-        />
-        <Card
-          title="Enigma"
-          image={ModelsCard5}
-          para={
-            'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
-          }
-          price={37000}
+          price={38000}
         />
         <Card
           title="T-Shirt 4"
@@ -186,7 +188,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={37000}
+          price={38000}
         />
         <Card
           title="T-Shirt 5"
@@ -194,7 +196,7 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={37000}
+          price={38000}
         />
         <Card
           title="T-Shirt 6"
@@ -202,33 +204,33 @@ function Home() {
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={37000}
+          price={38000}
         />
         <Card
           title="T-Shirt 7"
-          // image={ModelsCard7}
+          // image={ModelsPic}
           image={ModelsCard1}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={37000}
+          price={38000}
         />
         <Card
           title="T-Shirt 8"
           image={ModelsCard3}
-          // image={ModelsCard7}
+          // image={ModelsPic}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={37000}
+          price={38000}
         />
         <Card
           title="T-Shirt 9"
-          image={ModelsCard7}
+          image={ModelsPic}
           para={
             'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
           }
-          price={37000}
+          price={38000}
         />
       </div>
       {/* <button style={{ backgroundColor: 'green', borderRadius: '25px' }}> */}
