@@ -1,11 +1,11 @@
 import React from 'react';
 import './About.css';
 import Header from '../../components/Header/Header';
-import Image1 from '/src/assets/DOTI.jpg';
+import Image1 from '/src/assets/DOTI.jpeg';
 import Image2 from '/src/assets/DOTI-front.jpg';
 import Image3 from '/src/assets/Hope.jpeg';
 import Image4 from '/src/assets/Hope-Front.jpeg';
-import Image5 from '/src/assets/DOTI.jpg';
+import Image5 from '/src/assets/DOTI.jpeg';
 import Image6 from '/src/assets/DOTI-front.jpg';
 import Image7 from '/src/assets/Hope.jpeg';
 import GroupSH from '/src/assets/Models-pic.jpeg';

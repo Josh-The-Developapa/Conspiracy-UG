@@ -9,7 +9,7 @@ import { FaShoppingBag } from 'react-icons/fa';
 import { CiSearch } from 'react-icons/ci';
 import Hope from '/src/assets/hope.jpg';
 import Reckless from '/src/assets/Reckless.png';
-import Overthinker from '/src/assets/DOTI.jpg';
+import Overthinker from '/src/assets/DOTI.jpeg';
 
 import Cart from '../Cart/Cart.jsx';
 import Modal from '../Modal/Modal.jsx';
