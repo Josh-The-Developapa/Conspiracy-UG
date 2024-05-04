@@ -151,7 +151,7 @@ function Home() {
       </div>
       <div className="cardDiv">
         <Card
-          title="Over think"
+          title="Overthink"
           image={DOTI_BACK}
           // hoverPic={DOTI_BACK}
           para={
