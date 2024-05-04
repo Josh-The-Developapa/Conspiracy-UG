@@ -65,7 +65,7 @@ function Cart() {
       }
     }
     setDiscount(0);
-    setError('Invalid coupon. No discount applied');
+    setError('No discount applied');
     return;
   };
 
