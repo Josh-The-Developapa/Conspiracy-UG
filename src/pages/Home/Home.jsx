@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
-import DOTI_BACK from '/src/assets/DOTI.jpg';
+import DOTI_BACK from '/src/assets/DOTI.jpeg';
 import DOTI_FRONT from '/src/assets/DOTI-front.jpg';
 import Hope from '/src/assets/Hope.jpeg';
 import HopeFront from '/src/assets/Hope-Front.jpeg';
@@ -154,7 +154,7 @@ function Home() {
         <Card
           title="Overthink"
           image={DOTI_BACK}
-          // hoverPic={DOTI_BACK}
+          hoverPic={DOTI_FRONT}
           para={
             "Don't Over Think It. Stay stylish, keep your look effortlessly cool and your mind at ease."
           }
