@@ -3,13 +3,12 @@ import './About.css';
 import Header from '../../components/Header/Header';
 import Image1 from '/src/assets/DOTI.jpg';
 import Image2 from '/src/assets/DOTI-front.jpg';
-import Image3 from '/src/assets/card-image3.png';
-import Image4 from '/src/assets/riya-giveaway.png';
-import Image8 from '/src/assets/card-image6.png';
-import Image6 from '/src/assets/card-image7.png';
-import Image9 from '/src/assets/card-image5.png';
-import Image10 from '/src/assets/card-image4.png';
-import Image11 from '/src/assets/Models-pic.png';
+import Image3 from '/src/assets/Hope.jpeg';
+import Image4 from '/src/assets/Hope-Front.jpeg';
+import Image5 from '/src/assets/DOTI.jpg';
+import Image6 from '/src/assets/DOTI-front.jpg';
+import Image7 from '/src/assets/Hope.jpeg';
+import GroupSH from '/src/assets/Models-pic.jpeg';
 import Footer from '../../components/Footer/footer';
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
@@ -38,7 +37,7 @@ const About = () => {
         style={{ width: '100vw', cursor: 'pointer' }}
       >
         <img
-          src={Image11}
+          src={GroupSH}
           alt="Clothing"
           className="tilted-image1"
           style={{ zIndex: 1, height: '550px' }}
@@ -118,7 +117,7 @@ const About = () => {
         </div>
         <div className="image-container1">
           <img
-            src={Image8}
+            src={Image5}
             alt="Clothing"
             className="tilted-image1"
             style={{ zIndex: 5, height: '500px' }}
@@ -148,22 +147,7 @@ const About = () => {
         </div>
         <div className="image-container1">
           <img
-            src={Image10}
-            alt="Clothing"
-            className="tilted-image1"
-            style={{ zIndex: 6, height: '500px' }}
-          />
-          <div className="overlay1">
-            <h2>Winter Styles</h2>
-            <p>
-              Take a look at our awesome team, from models to top level
-              shareholders, all working together to bring forth conspiracy
-            </p>
-          </div>
-        </div>
-        <div className="image-container1">
-          <img
-            src={Image9}
+            src={Image7}
             alt="Clothing"
             className="tilted-image1"
             style={{ zIndex: 6, height: '500px' }}

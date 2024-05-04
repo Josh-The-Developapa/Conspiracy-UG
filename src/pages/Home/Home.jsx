@@ -4,7 +4,8 @@ import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
 import DOTI_BACK from '/src/assets/DOTI.jpg';
 import DOTI_FRONT from '/src/assets/DOTI-front.jpg';
-import Hope from '/src/assets/hope.jpg';
+import Hope from '/src/assets/Hope.jpeg';
+import HopeFront from '/src/assets/Hope-Front.jpeg';
 import Reckless from '/src/assets/Reckless.png';
 import Footer from '../../components/Footer/footer';
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
@@ -152,7 +153,7 @@ function Home() {
         <Card
           title="Over thinker"
           image={DOTI_BACK}
-          // hoverPic={DOTI_FRONT}
+          hoverPic={DOTI_FRONT}
           para={
             "Don't Over Think It. Stay stylish, keep your look effortlessly cool and your mind at ease."
           }
@@ -161,6 +162,7 @@ function Home() {
         <Card
           title="Hope"
           image={Hope}
+          hoverPic={HopeFront}
           // image={ModelsCard1}
           para={
             "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace."
