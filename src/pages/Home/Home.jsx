@@ -6,7 +6,8 @@ import DOTI_BACK from '/src/assets/DOTI.jpg';
 import DOTI_FRONT from '/src/assets/DOTI-front.jpg';
 import Hope from '/src/assets/Hope.jpeg';
 import HopeFront from '/src/assets/Hope-Front.jpeg';
-import Reckless from '/src/assets/Reckless.png';
+import Reckless from '/src/assets/Reckless.jpeg';
+import RecklessFront from '/src/assets/Reckless-front.jpeg';
 import Footer from '../../components/Footer/footer';
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
@@ -172,6 +173,7 @@ function Home() {
         <Card
           title="Reckless"
           image={Reckless}
+          hoverPic={RecklessFront}
           // hoverPic={Reckless}
           // image={ModelsCard3}
           para={

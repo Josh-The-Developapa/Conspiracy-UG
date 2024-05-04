@@ -51,7 +51,7 @@ function Card(props) {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsFront((prevIsFront) => !prevIsFront); // Toggle between front and back
-    }, 2000); // Change sides every 2 seconds
+    }, 2700); // Change sides every 2 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
