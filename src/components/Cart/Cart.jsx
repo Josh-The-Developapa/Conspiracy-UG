@@ -17,7 +17,7 @@ function Cart() {
   const [coupon, setCoupon] = useState('');
   const [error, setError] = useState('');
   const [checkoutComplete, setCheckoutComplete] = useState(false);
-  const [addressExpanded, setAddressExpanded] = useState(false); // State to track address section expansion
+  const [addressExpanded, setAddressExpanded] = useState(true); // State to track address section expansion
   const [date, setDate] = useState('');
   const [address, setAddress] = useState({
     fullName: '',
@@ -230,7 +230,6 @@ function Cart() {
                     value={item.size}
                     onChange={(e) => handleSizeChange(index, e.target.value)}
                   >
-                    <option value="">Shirt Size</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
