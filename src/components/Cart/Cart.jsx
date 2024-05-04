@@ -226,12 +226,16 @@ function Cart() {
                     }
                   />
                   <br />
-                  <input
-                    style={{ width: '70px' }}
-                    placeholder="Shirt size"
+                  <select
                     value={item.size}
                     onChange={(e) => handleSizeChange(index, e.target.value)}
-                  />
+                  >
+                    <option value="">Shirt Size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
                 </div>
                 <IoMdTrash
                   className="trash-can"

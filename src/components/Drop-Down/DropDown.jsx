@@ -39,7 +39,7 @@ function DropDown(props) {
         >
           Home
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/about"
           style={{ marginTop: '15px' }}
           className="NavLinkDropDown"
@@ -48,7 +48,7 @@ function DropDown(props) {
           }}
         >
           About
-        </NavLink>
+        </NavLink> */}
         {/* <button
           style={{
             color: 'white',

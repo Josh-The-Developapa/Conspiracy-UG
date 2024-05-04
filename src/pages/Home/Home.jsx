@@ -151,9 +151,9 @@ function Home() {
       </div>
       <div className="cardDiv">
         <Card
-          title="Over thinker"
+          title="Over think"
           image={DOTI_BACK}
-          // hoverPic={DOTI_FRONT}
+          // hoverPic={DOTI_BACK}
           para={
             "Don't Over Think It. Stay stylish, keep your look effortlessly cool and your mind at ease."
           }
@@ -162,7 +162,7 @@ function Home() {
         <Card
           title="Hope"
           image={Hope}
-          // hoverPic={HopeFront}
+          hoverPic={HopeFront}
           // image={ModelsCard1}
           para={
             "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace."
@@ -172,6 +172,7 @@ function Home() {
         <Card
           title="Reckless"
           image={Reckless}
+          // hoverPic={Reckless}
           // image={ModelsCard3}
           para={
             'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.'

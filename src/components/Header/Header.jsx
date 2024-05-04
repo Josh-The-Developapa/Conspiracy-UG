@@ -111,9 +111,9 @@ function Header() {
           <NavLink to="/" className="NavLink" style={{ marginLeft: '50px' }}>
             Home
           </NavLink>
-          <NavLink to="/about" className="NavLink">
+          {/* <NavLink to="/about" className="NavLink">
             About Us
-          </NavLink>
+          </NavLink> */}
         </div>
         <div className="search-container">
           <CiSearch

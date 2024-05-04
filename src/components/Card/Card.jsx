@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './Card.css';
 import Context from '../../Context/Context';
 
@@ -6,6 +6,7 @@ function Card(props) {
   const ctx = useContext(Context);
   const [hovered, setHovered] = useState(false);
   const [buttonText, setButtonText] = useState('Add to cart'); // State for button text
+  const [isFront, setIsFront] = useState(true); // State to track which side of the card is visible
 
   const product = {
     title: props.title,
@@ -47,13 +48,21 @@ function Card(props) {
     }, 2000); // Change back after 2 seconds (adjust time as needed)
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFront((prevIsFront) => !prevIsFront); // Toggle between front and back
+    }, 2000); // Change sides every 2 seconds
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
+
   return (
     <div
       className="cardd"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {hovered && (
+      {hovered ? (
         <div className="overlay">
           <span className="check-out-text" style={{ cursor: 'pointer' }}>
             <button
@@ -65,10 +74,12 @@ function Card(props) {
             </button>
           </span>
         </div>
+      ) : (
+        ''
       )}
       <img
-        className={hovered ? 'card-img' : 'card-img-back'}
-        src={hovered && props.hoverPic ? props.hoverPic : props.image}
+        className={isFront ? 'card-img' : 'card-img-back'}
+        src={!isFront && props.hoverPic ? props.hoverPic : props.image}
         alt={props.image}
       />
       <h2 style={{ color: 'white', marginBottom: '-15px', marginLeft: '20px' }}>
