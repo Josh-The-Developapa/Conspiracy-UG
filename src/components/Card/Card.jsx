@@ -8,6 +8,14 @@ function Card(props) {
   const [buttonText, setButtonText] = useState('Add to cart'); // State for button text
   const [isFront, setIsFront] = useState(true); // State to track which side of the card is visible
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFront((prevIsFront) => !prevIsFront); // Toggle between front and back
+    }, 2000); // Change sides every 2 seconds
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
+
   const product = {
     title: props.title,
     price: props.price,
@@ -47,14 +55,6 @@ function Card(props) {
       setButtonText('Add to cart'); // Change button text back to "Add to cart" after a few seconds
     }, 2000); // Change back after 2 seconds (adjust time as needed)
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsFront((prevIsFront) => !prevIsFront); // Toggle between front and back
-    }, 2000); // Change sides every 2 seconds
-
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, []);
 
   return (
     <div
