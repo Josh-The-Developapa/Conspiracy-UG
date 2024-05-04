@@ -153,7 +153,7 @@ function Home() {
         <Card
           title="Over thinker"
           image={DOTI_BACK}
-          hoverPic={DOTI_FRONT}
+          // hoverPic={DOTI_FRONT}
           para={
             "Don't Over Think It. Stay stylish, keep your look effortlessly cool and your mind at ease."
           }
@@ -162,7 +162,7 @@ function Home() {
         <Card
           title="Hope"
           image={Hope}
-          hoverPic={HopeFront}
+          // hoverPic={HopeFront}
           // image={ModelsCard1}
           para={
             "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace."

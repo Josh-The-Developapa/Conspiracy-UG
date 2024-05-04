@@ -207,10 +207,10 @@ function Cart() {
                 <img
                   src={
                     item.title == 'Hope'
-                      ? `../../assets/hope.jpg`
+                      ? `/src/assets/hope.jpg`
                       : item.title == 'Reckless'
-                      ? `../../assets/Reckless.png`
-                      : `../../assets/DOTI.jpg`
+                      ? `/src/assets/Reckless.png`
+                      : `/src/assets/DOTI.jpg`
                   }
                   // `../../assets/${item.image}`
                   alt={item.title}
