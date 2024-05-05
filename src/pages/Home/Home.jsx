@@ -152,11 +152,13 @@ function Home() {
       </div>
       <div className="cardDiv">
         <Card
-          title="Overthink"
-          image={DOTI_BACK}
-          hoverPic={DOTI_FRONT}
+          title="Reckless"
+          image={Reckless}
+          hoverPic={RecklessFront}
+          // hoverPic={Reckless}
+          // image={ModelsCard3}
           para={
-            "Don't Over Think It. Stay stylish, keep your look effortlessly cool and your mind at ease."
+            'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.'
           }
           price={38000}
         />
@@ -171,13 +173,11 @@ function Home() {
           price={38000}
         />
         <Card
-          title="Reckless"
-          image={Reckless}
-          hoverPic={RecklessFront}
-          // hoverPic={Reckless}
-          // image={ModelsCard3}
+          title="Overthink"
+          image={DOTI_BACK}
+          hoverPic={DOTI_FRONT}
           para={
-            'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.'
+            "Don't Over Think It. Stay stylish, keep your look effortlessly cool and your mind at ease."
           }
           price={38000}
         />
