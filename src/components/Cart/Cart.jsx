@@ -17,7 +17,7 @@ function Cart() {
   const [coupon, setCoupon] = useState('');
   const [error, setError] = useState('');
   const [checkoutComplete, setCheckoutComplete] = useState(false);
-  const [addressExpanded, setAddressExpanded] = useState(true); // State to track address section expansion
+  const [addressExpanded, setAddressExpanded] = useState(false); // State to track address section expansion
   const [date, setDate] = useState('');
   const [address, setAddress] = useState({
     fullName: '',
