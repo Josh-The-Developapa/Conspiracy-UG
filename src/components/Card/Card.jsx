@@ -77,11 +77,15 @@ function Card(props) {
       ) : (
         ''
       )}
-      <img
-        className={isFront ? 'card-img' : 'card-img-back'}
-        src={!isFront && props.hoverPic ? props.hoverPic : props.image}
-        alt={props.image}
-      />
+      {isFront ? (
+        <img className="card-img" src={props.image} alt={props.image} />
+      ) : (
+        <img
+          className="card-img-back"
+          src={props.hoverPic}
+          alt={props.hoverPic}
+        />
+      )}
       <h2 style={{ color: 'white', marginBottom: '-15px', marginLeft: '20px' }}>
         {props.title}: {`${props.price.toLocaleString('en-US')} UGX`}
       </h2>
