@@ -104,7 +104,11 @@ function Cart() {
 
     setLoading(true);
 
-    if (!address.cityTown || !address.street || !address.phoneNumber) {
+    if (
+      address.cityTown.trim() == '' ||
+      address.street.trim() == '' ||
+      address.phoneNumber.trim() == ''
+    ) {
       setError('Please fill in all the above fields.');
       setLoading(false); // Reset loading state
     } else {
