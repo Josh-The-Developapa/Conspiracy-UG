@@ -20,14 +20,12 @@
   /* margin-top: 70px; */
   object-fit: cover;
   /* The image used */
-  background-image: url(../../assets/Models-pic.jpeg);
   will-change: transform;
   /* transform: translateZ(0); */
   /* Set a specific height */
   min-height: 90vh; 
   /* Create the parallax scrolling effect */
   /* background-attachment:fixed;  */
-  background-position: top center; 
   background-repeat: no-repeat;
   background-size:cover;
   display:flex;
@@ -41,9 +39,18 @@
   }
 } */
 
+@media screen and (min-width:661px){
+  .models-pic{
+   background-image: url(../../assets/Models-pic.jpeg);
+  background-position: top center; 
+
+  }
+}
+
+
 @media screen and (max-width:660px){
   .models-pic{
-    background-image: url(../../assets/Models-pic-phone.jpeg);
+  background-image: url(../../assets/Models-pic-phone.jpeg);
   background-position: top left; 
 
   }
