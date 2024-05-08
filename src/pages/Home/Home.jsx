@@ -147,7 +147,7 @@ function Home() {
         <p style={{ fontSize: '20px' }}>
           Discover trendy outfits for every occasion. <br />
           <br />
-          Tap the images to add to them cart
+          Tap the images to add them to cart
         </p>
       </div>
       <div className="cardDiv">
